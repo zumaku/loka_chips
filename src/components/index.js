@@ -1,23 +1,23 @@
-import navbar from "./navbar"
-import home from "./home"
-import product from "./products"
-import tips from "./tips"
-import banner from "./banner"
-import testimonials from "./testimonials"
-import gallery from "./gallery"
-import cta from "./cta"
-import contact from "./contact"
-import footer from "./footer"
+import Navbar from "./navbar"
+import Home from "./home"
+import Product from "./products"
+import Tips from "./tips"
+import Banner from "./banner"
+import Testimonials from "./testimonials"
+import Gallery from "./gallery"
+import Cta from "./cta"
+import Contact from "./contact"
+import Footer from "./footer"
 
 export {
-    navbar,
-    home,
-    product,
-    tips,
-    banner,
-    testimonials,
-    gallery,
-    cta,
-    contact,
-    footer
+    Navbar,
+    Home,
+    Product,
+    Tips,
+    Banner,
+    Testimonials,
+    Gallery,
+    Cta,
+    Contact,
+    Footer
 }
