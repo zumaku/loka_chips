@@ -8,6 +8,8 @@ export default {
         primary: "#F0C91A", 
         secondary: "#341D12",
         accent: "#DD9A00",
+        chocholate: "#805F0F",
+        balado: "#CB2727",
         txtcolor: "#1E1E1E",
         bgcolor: "#F2F2F2",
       },

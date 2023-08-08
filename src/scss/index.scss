@@ -4,9 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+$primary: #F0C91A; 
+$secondary: #341D12;
+$accent: #DD9A00;
+$chocholate: #805F0F;
+$balado: #CB2727;
+$txtcolor: #1E1E1E;
+$bgcolor: #F2F2F2;
+
 @font-face {
   font-family: "gsub";
   src: url("../assets/GillSansUltraBold.ttf") format("truetype");
 }
 
-
+.text-stroke-4 {
+  -webkit-text-stroke: 4px $secondary;
+}
