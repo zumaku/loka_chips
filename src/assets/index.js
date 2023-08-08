@@ -23,6 +23,7 @@ import location from "./location.svg";
 import email from './email.svg';
 import world from "./world.svg";
 import instagram from './instagram.svg';
+import whatsapp from './whatsapp.svg';
 
 export {
     logo,
@@ -49,5 +50,6 @@ export {
     location,
     email,
     world,
-    instagram
+    instagram,
+    whatsapp
 }
