@@ -1,11 +1,12 @@
-import './App.css'
-// import { navbar, home, product, tips, banner, testimonials, gallery, cta, contact, footer } from "./components"
+// import { Navbar, Home, Product, Tips, Banner, Testimonials, Gallery, Cta, Contact, Footer } from "./components"
+import {Navbar} from "./components/navbar"
 
 function App() {
   return (
-    <>
+    <div>
+      <Navbar />
       Loka Chips Enak
-    </>
+    </div>
   )
 }
 
