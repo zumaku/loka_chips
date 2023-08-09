@@ -1,13 +1,13 @@
-import Navbar from "./navbar"
-import Home from "./home"
-import Product from "./products"
-import Tips from "./tips"
-import Banner from "./banner"
-import Testimonials from "./testimonials"
-import Gallery from "./gallery"
-import Cta from "./cta"
-import Contact from "./contact"
-import Footer from "./footer"
+import Navbar from "./Navbar"
+import Home from "./Home"
+import Product from "./Products"
+import Tips from "./Tips"
+import Banner from "./Banner"
+import Testimonials from "./Testimonials"
+import Gallery from "./Gallery"
+import CTA from "./CTA"
+import Contact from "./Contact"
+import Footer from "./Footer"
 
 export {
     Navbar,
@@ -17,7 +17,7 @@ export {
     Banner,
     Testimonials,
     Gallery,
-    Cta,
+    CTA,
     Contact,
     Footer
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-
-export const gallery = () => {
+const Gallery = () => {
   return (
-    <div>gallery</div>
-  )
+    <div></div>
+  );
 }
+
+export default Gallery;

@@ -1,7 +1,7 @@
-import React from 'react'
-
-export const tips = () => {
+const Tips = () => {
   return (
-    <div>tips</div>
-  )
+    <div></div>
+  );
 }
+
+export default Tips;
