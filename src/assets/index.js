@@ -1,4 +1,4 @@
-import logo from "./horizontal_loka_chips.svg";
+import logo from "./horizontal_loka_chips.png";
 import heroimg from "./hero_img.png";
 import original1 from "./original_tilt.png";
 import original2 from "./original_stand.png";
@@ -19,6 +19,7 @@ import gallery6 from "./gallery6.png";
 import gallery7 from "./gallery7.png";
 import gallery8 from "./gallery8.png";
 import gallery9 from "./gallery9.png";
+import play from "./play.svg";
 import location from "./location.svg";
 import email from './email.svg';
 import world from "./world.svg";
@@ -47,6 +48,7 @@ export {
     gallery7,
     gallery8,
     gallery9,
+    play,
     location,
     email,
     world,

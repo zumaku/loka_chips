@@ -3,23 +3,28 @@ import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy
 export const navLinks = [
     {
         id: "home",
-        title: "Home"
+        title: "Home",
+        link: "/"
     },
     {
         id: "produk",
-        title: "Produk"
+        title: "Produk",
+        link: "/produk"
     },
     {
         id: "testimoni",
-        title: "Testimoni"
+        title: "Testimoni",
+        link: "/testimoni"
     },
     {
         id: "galeri",
-        title: "Galeri"
+        title: "Galeri",
+        link: "/galeri"
     },
     {
         id: "kontak",
-        title: "Kontak"
+        title: "Kontak",
+        link: "/kontak"
     },
 ];
 

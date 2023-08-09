@@ -10,9 +10,12 @@ const style = {
     heading3: "text-lg font-bold",
     headingS: "font-gsub text-primary drop-shadow-[3px_3px_0_#341D12] text-stroke-4",
     paragraph: "font-poppins text-lg font-normal",
+    navbar: "text-primary font-bold drop-shadow-[1.5px_1px_0_#341D12] text-stroke-1",
 
     flexCenter: "flex justify-center items-center",
     flexStart: "flex justify-center items-start",
+
+    paddingX: "lg:px-36 px-6",
 
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
