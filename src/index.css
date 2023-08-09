@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: "gsub";
-  src: url("../assets/GillSansUltraBold.ttf") format("truetype");
+  src: url("assets/GillSansUltraBold.ttf") format("truetype");
 }
+
 .text-stroke-4 {
   -webkit-text-stroke: 4px #341D12;
-}/*# sourceMappingURL=index.css.map */
+}
