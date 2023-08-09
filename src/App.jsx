@@ -1,6 +1,5 @@
-// import { Navbar, Home, Product, Tips, Banner, Testimonials, Gallery, Cta, Contact, Footer } from "./components"
-// import {Navbar} from "./components/navbar"
 import style from "./styles"
+// import { Navbar, Home, Product, Tips, Banner, Testimonials, Gallery, Cta, Contact, Footer } from "./components"
 
 function App() {
   return (
@@ -16,6 +15,7 @@ function App() {
       <div className="font-bold w-fit px-8 py-[18px] rounded-md bg-white text-secondary hover:-translate-y-1 transition duration-150 ease-in">White Btn</div><br />
       <div className="font-bold w-fit px-8 py-[18px] rounded-md hover:bg-primary border-collapse text-secondary hover:-translate-y-1 transition duration-150 ease-in border-[3px] border-secondary">Transparant Btn</div><br />
       <div className={`${style.btnYellow}`}>TRY BTN</div><br />
+      <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsam cumque voluptate fuga. Corporis eaque reiciendis sit ipsa quam! Quo impedit at, molestias quod hic voluptatum dicta eos expedita animi.</p>
     </div>
   )
 }

@@ -12,3 +12,7 @@
 .text-stroke-4 {
   -webkit-text-stroke: 4px #341D12;
 }
+
+body{
+  background-color: #FBFBFB;
+}
