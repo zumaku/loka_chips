@@ -15,7 +15,7 @@ const style = {
     flexCenter: "flex justify-center items-center",
     flexStart: "flex justify-center items-start",
 
-    paddingX: "lg:px-36 px-6",
+    paddingX: "lg:px-24 px-6",
 
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
