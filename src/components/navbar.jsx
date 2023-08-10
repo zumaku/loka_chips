@@ -1,13 +1,30 @@
-import { useState, useRef} from "react"
+import { useState, useEffect } from "react"
 import gsap, {Power4} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import {logo} from "../assets"
 import {navLinks} from "../constants"
 import style from "../styles";
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
-  let tl = gsap.timeline({ease: Power4.easeOut})
+  const tl = gsap.timeline({ease: Power4.easeOut})
+
+  useEffect(()=>{
+    const showNav = gsap.to('.navContainer', {yPercent:-100, duration:.5, ease:Power4.easeInOut})
+    // gsap.fromTo('.navContainer', {yPercent:0, duration:.5, ease:Power4.easeInOut}, {yPercent:-100, duration:3, ease:Power4.easeInOut})
+    
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      onUpdate: (self) => {
+        self.direction === +1 ? showNav.play() : showNav.reverse()
+      }
+    });
+    
+    // gsap.fromTo('.navContainer', {yPercent:0, duration:1,  ease:Power4.easeInOut}, {yPercent:-100, delay:10})
+  }, [])
 
   const handleToggle = () => {
     if(!toggle){
@@ -32,24 +49,8 @@ const Navbar = () => {
     setToggle(() => !toggle)
   }
 
-  const navbarContainer = useRef()
-  const showAnim = gsap.from(navbarContainer, { 
-    yPercent: -100,
-    paused: true,
-    duration: 0.2
-  }).progress(1);
-  
-  gsap.registerPlugin(ScrollTrigger)
-  ScrollTrigger.create({
-    start: "top top",
-    end: 99999,
-    onUpdate: (self) => {
-      self.direction === -1 ? showAnim.play() : showAnim.reverse()
-    }
-  });
-
   return (
-    <div className={`${style.paddingX} fixed w-full bg-primary navbar-container`} id="navbar-container" ref={navbarContainer}>
+    <div className={`${style.paddingX} fixed w-full bg-primary navContainer`} id="navbar-container">
       <nav className="flex justify-between items-center relative max-w-[1500px] py-3 sm:py-4 m-auto">
         <div className="w-24 z-10 max-w-7xl">
           <a href="/"><img src={logo} alt="Loka Chips Logo" /></a>
