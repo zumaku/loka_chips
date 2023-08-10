@@ -1,11 +1,13 @@
-import { useState } from "react"
-import gsap from "gsap"
+import { useState} from "react"
+import gsap, {Power4} from "gsap"
 import {logo} from "../assets"
 import {navLinks} from "../constants"
 import style from "../styles";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
+  let tl = gsap.timeline({ease: Power4.easeOut})
+
   const handleToggle = () => {
     if(!toggle){
       gsap.to('.lclose1', {duration:.8, width:'30.8492'})
@@ -13,22 +15,29 @@ const Navbar = () => {
       gsap.to('.lmenu1', {duration:.8, x:'100%'})
       gsap.to('.lmenu2', {duration:.8, x:'120%'})
       gsap.to('.lmenu3', {duration:.4, x:'100%'})
+      tl.fromTo('.mobileMenu', {borderRadius:'100%'}, {borderRadius:0, y:0, duration:.5})
+      navLinks.map((nav)=>{
+        tl.fromTo("#" + nav.id, {opacity:0, y:'20px'}, {duration:.3, opacity:1, y:0})
+      })
     } else{
       gsap.to('.lclose1', {duration:.7, width:0})
       gsap.to('.lclose2', {duration:.7, width:0})
       gsap.to('.lmenu1', {duration:1, x:0})
       gsap.to('.lmenu2', {duration:.8, x:0})
       gsap.to('.lmenu3', {duration:1.4, x:0})
+      tl.to(".nav-item", {opacity:0, y:'20px', duration:.3})
+        .to('.mobileMenu', {borderRadius:'6%',y:'-100%', duration:.5})
     }
     setToggle(() => !toggle)
   }
 
   return (
-    <nav className="flex justify-between items-center">
-      <div className="max-w-[141px] w-24">
+    <nav className="flex justify-between items-center relative">
+      <div className="max-w-[141px] w-24 z-10">
         <a href="/"><img src={logo} alt="Loka Chips Logo" /></a>
       </div>
       
+      {/* Desktop Menu */}
       <ul className="hidden sm:flex">{
         navLinks.map((nav, index)=>(
           <li
@@ -39,12 +48,13 @@ const Navbar = () => {
             `}
           >
             <a className={`${style.navbar}`} href={nav.link}>{nav.title}</a>
-            <div className="bg-secondary h-1 w-0 group-hover:w-3/4 transition-all duration-150"></div>
+            <div className="bg-secondary h-1 w-0 group-hover:w-3/4 transition-all duration-200"></div>
           </li>
         ))
       }</ul>
 
-      <div className="flex sm:hidden w-6 h-6 relative">
+      {/* Hamburger Menu */}
+      <div className="flex sm:hidden w-6 h-6 relative z-10">
         {/* Toggle */}
         <div className="toggle w-full h-full cursor-pointer absolute z-20" onClick={handleToggle}></div>
 
@@ -61,6 +71,23 @@ const Navbar = () => {
           <rect className="lmenu3" y="20" width="32" height="4" rx="1" fill="#341D12"/>
         </svg>
       </div>
+
+      {/* Mobile Menu */}
+      <ul className="mobileMenu -translate-y-[300%] h-screen sm:hidden flex flex-col items-center pt-20 absolute bg-primary top-0 -left-6 w-screen">{
+          navLinks.map((nav, index)=>(
+            <li
+              key={nav.id}
+              className={`
+                ${index == navLinks.length - 1 ? 'mb-0' : 'mb-8'}
+                nav-item ml-3 group w-fit font-gsub text-[35px] uppercase
+              `}
+              id={nav.id}
+            >
+              <a className={`${style.navbar}`} href={nav.link}>{nav.title}</a>
+              <div className="bg-secondary h-1 w-0 group-hover:w-3/4 transition-all duration-200"></div>
+            </li>
+          ))
+        }</ul>
     </nav>
   );
   

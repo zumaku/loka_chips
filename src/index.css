@@ -10,8 +10,13 @@
 }
 
 .text-stroke-1 {
-  -webkit-text-stroke: 1px #341D12;
+  -webkit-text-stroke: .5px #341D12;
 }
+
+.text-stroke-half {
+  -webkit-text-stroke: .5px #341D12;
+}
+
 .text-stroke-4 {
   -webkit-text-stroke: 4px #341D12;
 }
