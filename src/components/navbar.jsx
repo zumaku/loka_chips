@@ -22,6 +22,7 @@ const Navbar = () => {
     })
 
     showNav.pause()
+    gsap.fromTo(".navContainer", {y:-100, duration:1}, {y:0, delay:1.8})
     
     ScrollTrigger.create({
       start: "top top",
