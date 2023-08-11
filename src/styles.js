@@ -5,7 +5,7 @@ const style = {
     btnWhite: "font-bold w-fit text-base sl:text-[18px] px-4 sl:px-8 py-3 sl:py-[18px] rounded-md bg-white text-secondary hover:-translate-y-1 transition duration-150 ease-in",
     btnTransparant: "font-bold w-fit text-base sl:text-[18px] px-4 sl:px-8 py-3 sl:py-[18px] rounded-md hover:bg-primary border-collapse text-secondary hover:-translate-y-1 transition duration-150 ease-in border-[3px] border-secondary",
 
-    heading1: "text-4xl xs:text-[55px] xs:leading-[60px] lg:text-6xl font-bold",
+    heading1: "text-4xl xs:text-[55px] xs:leading-[60px] lg:text-5xl font-bold",
     heading2: "text-1xl sl:text-4xl font-bold",
     heading3: "text-lg font-bold",
     headingS: "font-gsub text-primary drop-shadow-[3px_3px_0_#341D12] text-stroke-4",
