@@ -40,7 +40,7 @@ const Navbar = () => {
       gsap.to('.lmenu3', {duration:.4, x:'100%'})
       tl.fromTo('.mobileMenu', {borderRadius:'100%'}, {borderRadius:0, y:0, duration:.5})
       navLinks.map((nav)=>{
-        tl.fromTo("#" + nav.id, {opacity:0, y:'20px'}, {duration:.3, opacity:1, y:0})
+        tl.fromTo("#nav-" + nav.id, {opacity:0, y:'20px'}, {duration:.3, opacity:1, y:0})
       })
       blockScroll()
     } else{
@@ -57,14 +57,14 @@ const Navbar = () => {
   }
 
   return (
-    <div className={`${style.paddingX} fixed w-full bg-primary navContainer `} id="navbar-container">
-      <nav className="flex justify-between items-center relative max-w-[1500px] py-3 sm:py-4 m-auto">
+    <div className={`${style.paddingX} fixed w-full bg-primary navContainer z-40`} id="navbar-container">
+      <nav className="flex justify-between items-center relative max-w-[1300px] py-3 sm:py-4 m-auto">
         <div className="w-24 z-10 max-w-7xl">
           <a href="/"><img src={logo} alt="Loka Chips Logo" /></a>
         </div>
         
         {/* Desktop Menu */}
-        <ul className="hidden sm:flex">{
+        <ul className="hidden md:flex">{
           navLinks.map((nav, index)=>(
             <li
               key={nav.id}
@@ -80,7 +80,7 @@ const Navbar = () => {
         }</ul>
 
         {/* Hamburger Menu */}
-        <div className="flex sm:hidden w-6 h-6 relative z-10">
+        <div className="flex md:hidden w-6 h-6 relative z-10">
           {/* Toggle */}
           <div className="toggle w-full h-full cursor-pointer absolute z-20" onClick={handleToggle}></div>
 
@@ -104,7 +104,7 @@ const Navbar = () => {
           Soalnya, saat user mengklik humb menunya, itu di pojok kanan atas,
           sedangkan nav itemnya akan muncul di sudut kiri bawah.
         */}
-        <ul className="mobileMenu -translate-y-[300%] h-screen sm:hidden pl-5 pb-8 flex flex-col justify-end absolute bg-primary top-0 -left-6 w-screen">{
+        <ul className="mobileMenu -translate-y-[300%] h-screen md:hidden pl-5 pb-8 flex flex-col justify-end absolute bg-primary top-0 -left-6 w-screen">{
             navLinks.map((nav, index)=>(
               <li
                 key={nav.id}
@@ -112,7 +112,7 @@ const Navbar = () => {
                   ${index == navLinks.length - 1 ? 'mb-0' : 'mb-3'}
                   nav-item ml-3 group w-fit font-gsub text-[35px] uppercase
                 `}
-                id={nav.id}
+                id={'nav-' + nav.id}
               >
                 <a className={`${style.navbar}`} href={nav.link}>{nav.title}</a>
                 <div className="bg-secondary h-1 w-0 group-hover:w-3/4 transition-all duration-200"></div>
