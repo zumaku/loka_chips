@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import gsap, {Power4} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import useScrollBlock from "../custonhooks/useScrollBlock"
 import {logo} from "../assets"
 import {navLinks} from "../constants"
 import style from "../styles";
@@ -9,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
+  const [blockScroll, allowScroll] = useScrollBlock()
   const tl = gsap.timeline({ease: Power4.easeOut})
 
   useEffect(()=>{
@@ -40,6 +42,7 @@ const Navbar = () => {
       navLinks.map((nav)=>{
         tl.fromTo("#" + nav.id, {opacity:0, y:'20px'}, {duration:.3, opacity:1, y:0})
       })
+      blockScroll()
     } else{
       gsap.to('.lclose1', {duration:.7, width:0})
       gsap.to('.lclose2', {duration:.7, width:0})
@@ -47,7 +50,8 @@ const Navbar = () => {
       gsap.to('.lmenu2', {duration:.8, x:0})
       gsap.to('.lmenu3', {duration:1.4, x:0})
       tl.to(".nav-item", {opacity:0, y:'20px', duration:.3})
-        .to('.mobileMenu', {borderRadius:'6%',y:'-100%', duration:.5})
+      .to('.mobileMenu', {borderRadius:'6%',y:'-100%', duration:.5})
+      allowScroll()
     }
     setToggle(() => !toggle)
   }
@@ -95,12 +99,17 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <ul className="mobileMenu -translate-y-[300%] h-screen sm:hidden flex flex-col items-center pt-20 absolute bg-primary top-0 -left-6 w-screen">{
+        {/*Aku pikir untuk menggunakan layout ini untuk mobile navbarnya,
+          tapi aku tidak yakin dengan user experiens nya.
+          Soalnya, saat user mengklik humb menunya, itu di pojok kanan atas,
+          sedangkan nav itemnya akan muncul di sudut kiri bawah.
+        */}
+        <ul className="mobileMenu -translate-y-[300%] h-screen sm:hidden pl-5 pb-8 flex flex-col justify-end absolute bg-primary top-0 -left-6 w-screen">{
             navLinks.map((nav, index)=>(
               <li
                 key={nav.id}
                 className={`
-                  ${index == navLinks.length - 1 ? 'mb-0' : 'mb-8'}
+                  ${index == navLinks.length - 1 ? 'mb-0' : 'mb-3'}
                   nav-item ml-3 group w-fit font-gsub text-[35px] uppercase
                 `}
                 id={nav.id}
