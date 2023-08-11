@@ -114,7 +114,7 @@ const Navbar = () => {
                 `}
                 id={'nav-' + nav.id}
               >
-                <a className={`${style.navbar}`} href={nav.link}>{nav.title}</a>
+                <a className={`${style.navbar}`} href={'#' + nav.link}>{nav.title}</a>
                 <div className="bg-secondary h-1 w-0 group-hover:w-3/4 transition-all duration-200"></div>
               </li>
             ))
