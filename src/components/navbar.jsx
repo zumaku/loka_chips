@@ -12,18 +12,21 @@ const Navbar = () => {
   const tl = gsap.timeline({ease: Power4.easeOut})
 
   useEffect(()=>{
-    const showNav = gsap.to('.navContainer', {yPercent:-100, duration:.5, ease:Power4.easeInOut})
-    // gsap.fromTo('.navContainer', {yPercent:0, duration:.5, ease:Power4.easeInOut}, {yPercent:-100, duration:3, ease:Power4.easeInOut})
+    const showNav = gsap.to('.navContainer', {
+      y:-100,
+      duration:.7,
+      delay: .3,
+      ease:Power4.easeInOut
+    })
+
+    showNav.pause()
     
     ScrollTrigger.create({
       start: "top top",
-      end: 99999,
       onUpdate: (self) => {
         self.direction === +1 ? showNav.play() : showNav.reverse()
       }
     });
-    
-    // gsap.fromTo('.navContainer', {yPercent:0, duration:1,  ease:Power4.easeInOut}, {yPercent:-100, delay:10})
   }, [])
 
   const handleToggle = () => {
@@ -50,7 +53,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className={`${style.paddingX} fixed w-full bg-primary navContainer`} id="navbar-container">
+    <div className={`${style.paddingX} fixed w-full bg-primary navContainer `} id="navbar-container">
       <nav className="flex justify-between items-center relative max-w-[1500px] py-3 sm:py-4 m-auto">
         <div className="w-24 z-10 max-w-7xl">
           <a href="/"><img src={logo} alt="Loka Chips Logo" /></a>
