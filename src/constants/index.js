@@ -4,27 +4,27 @@ export const navLinks = [
     {
         id: "home",
         title: "Home",
-        link: "/"
+        link: "#"
     },
     {
         id: "produk",
         title: "Produk",
-        link: "/produk"
+        link: "#produk"
     },
     {
         id: "testimoni",
         title: "Testimoni",
-        link: "/testimoni"
+        link: "#testimoni"
     },
     {
         id: "galeri",
         title: "Galeri",
-        link: "/galeri"
+        link: "#galeri"
     },
     {
         id: "kontak",
         title: "Kontak",
-        link: "/kontak"
+        link: "#kontak"
     },
 ];
 
