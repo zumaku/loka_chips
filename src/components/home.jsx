@@ -15,13 +15,13 @@ const Home = () => {
     scrollTl.to(".circle", {y:35})
     
     const homeTl = gsap.timeline({defaults:{duration:.8, ease:Back.easeOut}})
-    homeTl.fromTo(".imgHero", {scale:.2, opacity:0}, {scale:1, opacity:1})
-          .fromTo(".heroContent", {duration:.3, ease:Power4.easeIn, x:-30, opacity:0}, {x:0, opacity:1})
+    homeTl.fromTo(".imgHero", {scale:.5, opacity:0}, {scale:1, opacity:1})
+          .fromTo(".heroContent", {duration:.3, ease:Power4.easeIn, x:-10, opacity:0}, {x:0, opacity:1})
           // .fromTo(".scrollAnim", {duration:.3, y:20, opacity:0}, {y:0, opacity:1})
 
     window.addEventListener("resize", handleResize);
 
-    lebarWin <= 930 ? homeTl.to(".scrollAnim", {opacity:0}) : homeTl.fromTo(".scrollAnim", {duration:.3, y:20, opacity:0}, {y:0, opacity:1})
+    lebarWin <= 930 ? homeTl.to(".scrollAnim", {opacity:0}) : homeTl.fromTo(".scrollAnim", {duration:.3, y:10, opacity:0}, {y:0, opacity:1})
 
     return () => {
       window.removeEventListener("resize", handleResize);
