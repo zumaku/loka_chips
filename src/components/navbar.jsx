@@ -22,7 +22,7 @@ const Navbar = () => {
     })
 
     showNav.pause()
-    gsap.fromTo(".navContainer", {y:-100, duration:1}, {y:0, delay:1.8})
+    // gsap.fromTo(".navContainer", {y:-100, duration:1}, {y:0, delay:1.8})
     
     ScrollTrigger.create({
       start: "top top",
@@ -105,7 +105,7 @@ const Navbar = () => {
           Soalnya, saat user mengklik humb menunya, itu di pojok kanan atas,
           sedangkan nav itemnya akan muncul di sudut kiri bawah.
         */}
-        <ul className="mobileMenu -translate-y-[300%] h-screen md:hidden pl-5 pb-8 flex flex-col justify-end absolute bg-primary top-0 -left-6 w-screen">{
+        <ul className="mobileMenu -translate-y-[300%] h-screen md:hidden pl-5 pb-8 flex flex-col justify-end absolute bg-primaryHalf backdrop-blur top-0 -left-[20px] w-screen">{
             navLinks.map((nav, index)=>(
               <li
                 key={nav.id}
@@ -115,7 +115,7 @@ const Navbar = () => {
                 `}
                 id={'nav-' + nav.id}
               >
-                <a className={`${style.navbar}`} href={'#' + nav.link}>{nav.title}</a>
+                <a className={`${style.navbar}`} href={nav.link}>{nav.title}</a>
                 <div className="bg-secondary h-1 w-0 group-hover:w-3/4 transition-all duration-200"></div>
               </li>
             ))
