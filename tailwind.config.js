@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#F0C91A", 
+        primary: "#F0C91A",
+        primaryHalf: "rgba(255, 199, 39, .5)",
         secondary: "#341D12",
         accent: "#DD9A00",
         chocholate: "#805F0F",
