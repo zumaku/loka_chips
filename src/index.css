@@ -9,6 +9,10 @@
   src: url("assets/GillSansUltraBold.ttf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .text-stroke-1 {
   -webkit-text-stroke: .5px #341D12;
 }
