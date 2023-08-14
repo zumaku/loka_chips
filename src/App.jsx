@@ -2,6 +2,7 @@ import style from "./styles"
 import { Navbar, Home, Product } from "./components"
 
 function App() {
+
   return (
     <div className="w-full overflow-hidden text-[18px] font-poppins h-fit">
       
@@ -15,8 +16,6 @@ function App() {
         <Product />
       </div>
 
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
