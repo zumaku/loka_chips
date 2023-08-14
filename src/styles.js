@@ -19,6 +19,8 @@ const style = {
 
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
+
+    arrow: "w-16 opacity-75 group-hover:w-[91px] group-hover:opacity-100 transition-all",
 };
 
 export default style;
