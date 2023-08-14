@@ -17,7 +17,7 @@ const Navbar = () => {
     const showNav = gsap.to('.navContainer', {
       y:-100,
       duration:.7,
-      delay: .3,
+      // delay: .3,
       ease:Power4.easeInOut
     })
 
@@ -33,26 +33,39 @@ const Navbar = () => {
   }, [])
 
   const handleToggle = () => {
-    if(!toggle){
+    if(toggle){  // Saat Navbar ditutup
+      // X close
+      gsap.to('.lclose1', {duration:.7, width:0})
+      gsap.to('.lclose2', {duration:.7, width:0})
+
+      // Humb open
+      gsap.to('.lmenu1', {duration:1, x:0})
+      gsap.to('.lmenu2', {duration:.8, x:0})
+      gsap.to('.lmenu3', {duration:1.4, x:0})
+
+      // Nav items
+      tl.to(".nav-item", {opacity:0, y:'20px', duration:.3})
+      .to('.mobileMenu', {y:'-100%', duration:.5})
+
+      allowScroll()
+    } else{     // Saat Navbar dibuka
+      // X open
       gsap.to('.lclose1', {duration:.8, width:'30.8492'})
       gsap.to('.lclose2', {duration:.8, width:'30.8492'})
+
+      // humb close
       gsap.to('.lmenu1', {duration:.8, x:'100%'})
       gsap.to('.lmenu2', {duration:.8, x:'120%'})
       gsap.to('.lmenu3', {duration:.4, x:'100%'})
-      tl.fromTo('.mobileMenu', {borderRadius:'100%'}, {borderRadius:0, y:0, duration:.5})
+
+      // Background blur
+      tl.fromTo('.mobileMenu', {ease: Power4.easeIn}, {y:0, duration:.5})
+
+      // Nav items
       navLinks.map((nav)=>{
         tl.fromTo("#nav-" + nav.id, {opacity:0, y:'20px'}, {duration:.3, opacity:1, y:0})
       })
       blockScroll()
-    } else{
-      gsap.to('.lclose1', {duration:.7, width:0})
-      gsap.to('.lclose2', {duration:.7, width:0})
-      gsap.to('.lmenu1', {duration:1, x:0})
-      gsap.to('.lmenu2', {duration:.8, x:0})
-      gsap.to('.lmenu3', {duration:1.4, x:0})
-      tl.to(".nav-item", {opacity:0, y:'20px', duration:.3})
-      .to('.mobileMenu', {borderRadius:'6%',y:'-100%', duration:.5})
-      allowScroll()
     }
     setToggle(() => !toggle)
   }
@@ -114,12 +127,20 @@ const Navbar = () => {
                   nav-item ml-3 group w-fit font-gsub text-[35px] uppercase
                 `}
                 id={'nav-' + nav.id}
-              >
-                <a className={`${style.navbar}`} href={nav.link}>{nav.title}</a>
+                >
+                <a
+                  className={`${style.navbar}`}
+                  href={nav.link}
+                  onClick={() => {
+                    setToggle(() => !toggle)
+                    handleToggle()
+                  }}
+                >{nav.title}</a>
                 <div className="bg-secondary h-1 w-0 group-hover:w-3/4 transition-all duration-200"></div>
               </li>
             ))
-          }</ul>
+          }
+        </ul>
       </nav>
     </div>
   );
