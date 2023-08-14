@@ -9,7 +9,7 @@ const Product = () => {
   return (
     <div className="relative w-full">
       {/* Half Circle */}
-      <div className="absolute productCircle h-72 sm:h-[700px] bg-white bottom-[-120px] sm:-bottom-1/2 -left-20 -right-20 lg:-right-24 lg:-left-24 rounded-[50%] z-[1]"></div>
+      <div className="absolute productCircle h-72 sm:h-[700px] lg:h-[650px] bg-white bottom-[-130px] sm:-bottom-1/2 -left-20 -right-20 lg:-right-32 lg:-left-32 rounded-[50%] z-[1]"></div>
 
       {/* Main Content */}
       <div className={`max-w-[1300px] m-auto`} id="produk">
@@ -24,7 +24,7 @@ const Product = () => {
           {/* Left Part */}
           <div className="left sm:pt-20 text-center sm:text-start z-[2]">
             <p className="mb-8">Rasa Autentik, Kerenyahan Sejati.</p>
-            <button className={`${style.btnTransparant} mb-10 sm:mb-0`}>Lihat Detail</button>
+            <button className={`${style.btnChocolate} mb-10 sm:mb-0`}>Lihat Detail</button>
           </div>
 
           {/* Mid Part */}
