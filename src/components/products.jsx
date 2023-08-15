@@ -1,10 +1,8 @@
 import { useState, useRef, useEffect } from "react"
-import gsap, {Back} from "gsap"
+import gsap, {Back, Power4} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import style from "../styles"
-import { original1, chocholate1, balado1 } from "../assets"
 import {produks} from "../constants"
-// import {produks} from "../constants"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -16,6 +14,8 @@ const Product = () => {
   const listRef = useRef(null)
   const ropeRef = useRef(null)
   const halfCrRef = useRef(null)
+  const taglineRef1 = useRef(null)
+  const taglineRef2 = useRef(null)
 
   useEffect(() => {
     // console.log(taglines[0][curIndex].tagline)
@@ -54,6 +54,19 @@ const Product = () => {
         // toggleActions: "restart none none none"
       }
     })
+
+    // Tagline Animation
+    const tglnTl = gsap.timeline({
+      duration:.3,
+      ease:Power4.easeOut,
+      scrollTrigger:{
+        trigger:taglineRef1.current,
+        start:"top 90%",
+      }
+    })
+    tglnTl.to(taglineRef1.current, {width:"100%"})
+          .to(taglineRef1.current, {x:"100%"})
+          .to(taglineRef2.current, {opacity:1})
 
     // Rope shape animation
     const animateSVG = () => {
@@ -118,7 +131,10 @@ const Product = () => {
         <div className="slide1 grid sm:grid-cols-3 grid-cols-1">
           {/* Left Part */}
           <div className="left sm:pt-20 text-center sm:text-start z-[2]">
-            <p className="mb-8">{product.tagline}</p>
+            <div className="tagline mb-8 sm:max-w-sm overflow-hidden relative">
+              <div ref={taglineRef1} className="w-0 h-full bg-yellow-300 absolute"></div>
+              <p ref={taglineRef2} className="opacity-0">{product.tagline}</p>
+            </div>
             <button className={`${style.btnChocolate} mb-10 sm:mb-0`}>Lihat Detail</button>
           </div>
 
