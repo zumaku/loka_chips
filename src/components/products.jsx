@@ -1,15 +1,16 @@
 import { useState, useRef, useEffect } from "react"
-import style from "../styles"
-import {original1, chocholate1, balado1} from "../assets"
 import gsap, {Back} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import style from "../styles"
+import { original1, chocholate1, balado1 } from "../assets"
+import {produks} from "../constants"
 // import {produks} from "../constants"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Product = () => {
-  const ImgPdts = [original1, chocholate1, balado1]
   const [curIndex, setCurIndex]  = useState(0)
+  const curProduct = produks[curIndex]
 
   const imgPdtRef = useRef(null)
   const listRef = useRef(null)
@@ -17,6 +18,9 @@ const Product = () => {
   const halfCrRef = useRef(null)
 
   useEffect(() => {
+    // console.log(taglines[0][curIndex].tagline)
+    // console.log(taglines)
+
     // Img1 Products annimation
     gsap.to(imgPdtRef.current, {
       duration:.5,
@@ -76,12 +80,12 @@ const Product = () => {
   }, [])
 
   const prevImg = () => {
-    setCurIndex((prevIndex) => (prevIndex === 0 ? ImgPdts.length - 1 : prevIndex - 1))
+    setCurIndex((prevIndex) => (prevIndex === 0 ? produks.length - 1 : prevIndex - 1))
     handleShake(imgPdtRef)
   };
 
   const nextImg = () => {
-    setCurIndex((prevIndex) => (prevIndex === ImgPdts.length - 1 ? 0 : prevIndex + 1))
+    setCurIndex((prevIndex) => (prevIndex === produks.length - 1 ? 0 : prevIndex + 1))
     handleShake(imgPdtRef)
   };
 
@@ -121,7 +125,7 @@ const Product = () => {
           {/* Mid Part */}
           <div className="mid p-5 flex flex-col justify-center items-center z-[2]">
             <div ref={imgPdtRef} className="opacity-0 translate-y-28" >
-              <img className="max-w-[247px] mb-10 sm:mb-16" src={ImgPdts[curIndex]} alt="Loka Chips Rasa original" />
+              <img className="max-w-[247px] mb-10 sm:mb-16" src={curProduct.img} alt="Loka Chips Rasa original" />
             </div>
             <div className="arrows w-full flex justify-center items-center">
               <div
