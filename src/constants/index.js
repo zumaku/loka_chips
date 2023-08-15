@@ -32,7 +32,7 @@ export const produks = [
     {
         id: "original",
         title: "Original",
-        tagline: "Rasa Autentik, Kerenyahan Sejati",
+        tagline: "Rasa Asli dan Autentik, Kerenyahan Pisang Sejati",
         img: original1,
         detail: [
             {

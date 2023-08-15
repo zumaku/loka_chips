@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Product = () => {
   const [curIndex, setCurIndex]  = useState(0)
-  const curProduct = produks[curIndex]
+  const product = produks[curIndex]
 
   const imgPdtRef = useRef(null)
   const listRef = useRef(null)
@@ -111,21 +111,21 @@ const Product = () => {
         {/* Title */}
         <div className="secTitle text-center mb-5">
           <h3 className={`${style.heading2}`}>Varian Produk</h3>
-          <h1 className={`${style.headingS} text-5xl sm:text-[64px]`}>ORIGINAL</h1>
+          <h1 className={`${style.headingS} text-5xl sm:text-[64px]`}>{product.title}</h1>
         </div>
 
         {/* 1st Slide */}
         <div className="slide1 grid sm:grid-cols-3 grid-cols-1">
           {/* Left Part */}
           <div className="left sm:pt-20 text-center sm:text-start z-[2]">
-            <p className="mb-8">Rasa Autentik, Kerenyahan Sejati.</p>
+            <p className="mb-8">{product.tagline}</p>
             <button className={`${style.btnChocolate} mb-10 sm:mb-0`}>Lihat Detail</button>
           </div>
 
           {/* Mid Part */}
           <div className="mid p-5 flex flex-col justify-center items-center z-[2]">
             <div ref={imgPdtRef} className="opacity-0 translate-y-28" >
-              <img className="max-w-[247px] mb-10 sm:mb-16" src={curProduct.img} alt="Loka Chips Rasa original" />
+              <img className="max-w-[247px] mb-10 sm:mb-16" src={product.img} alt="Loka Chips Rasa original" />
             </div>
             <div className="arrows w-full flex justify-center items-center">
               <div
