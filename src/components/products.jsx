@@ -77,10 +77,24 @@ const Product = () => {
 
   const prevImg = () => {
     setCurIndex((prevIndex) => (prevIndex === 0 ? ImgPdts.length - 1 : prevIndex - 1))
+    handleShake(imgPdtRef)
   };
 
   const nextImg = () => {
     setCurIndex((prevIndex) => (prevIndex === ImgPdts.length - 1 ? 0 : prevIndex + 1))
+    handleShake(imgPdtRef)
+  };
+
+  const handleShake = (e) => {
+    gsap.to(e.current, {
+      x: -15,
+      duration: 0.05,
+      repeat: 5,
+      yoyo: true,
+      onComplete: () => {
+        gsap.set(e.current, { x: 0 }); // Reset the position after shaking
+      },
+    });
   };
 
   return (
