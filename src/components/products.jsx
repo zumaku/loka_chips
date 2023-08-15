@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger)
 const Product = () => {
   const imgPdt1Ref = useRef(null)
   const listRef = useRef(null)
+  const ropeRef = useRef(null)
+  const halfCrRef = useRef(null)
 
   useEffect(() => {
     // Img1 Products annimation
@@ -21,7 +23,17 @@ const Product = () => {
       scrollTrigger: {
         trigger:imgPdt1Ref.current,
         start:"top 80%",
-        // markers:true,
+      }
+    })
+
+    // half circle bg animation
+    gsap.to(halfCrRef.current, {
+      y:0,
+      duration:1,
+      ease:Back.easeOut,
+      scrollTrigger:{
+        trigger:imgPdt1Ref.current,
+        start:"top 80%",
       }
     })
 
@@ -31,15 +43,39 @@ const Product = () => {
       scrollTrigger: {
         trigger:imgPdt1Ref.current,
         start:"120px center",
-        markers:true,
+        // toggleActions: "play none none none"
+        // toggleActions: "restart none none none"
       }
     })
+
+    // Rope shape animation
+    const animateSVG = () => {
+      const path = ropeRef.current.querySelector("path");
+
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        duration: 3,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: path,
+          start: "top 80%",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+    };
+
+    animateSVG();
   }, [])
 
   return (
     <div className="relative w-full">
       {/* Half Circle */}
-      <div className="absolute productCircle h-72 sm:h-[700px] lg:h-[650px] bg-white bottom-[-130px] sm:-bottom-1/2 -left-20 -right-20 lg:-right-32 lg:-left-32 rounded-[50%] z-[1]"></div>
+      <div ref={halfCrRef} className="absolute productCircle h-72 sm:h-[700px] lg:h-[650px] bg-white bottom-[-130px] sm:-bottom-1/2 -left-20 -right-20 lg:-right-32 lg:-left-32 rounded-[50%] z-[1] translate-y-full"></div>
 
       {/* Main Content */}
       <div className={`max-w-[1300px] m-auto`} id="produk">
@@ -81,7 +117,7 @@ const Product = () => {
           {/* Right Part */}
           <div className="right relative flex justify-center items-center z-[2]">
             <div className="w-fit hidden sm:block sm:absolute md:static bottom-0 lg:static">
-              <svg className="rope_shape" width="127" height="114" viewBox="0 0 127 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg ref={ropeRef} className="rope_shape" width="127" height="114" viewBox="0 0 127 114" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M125 17.8615C119.352 10.3592 106.053 -2.93804 98.0435 3.89166C88.0311 12.4288 116.528 27.9508 111.137 40.3685C105.745 52.7861 73.3975 10.8766 65.6956 20.9659C57.9937 31.0552 101.894 60.5471 91.1118 72.1887C80.3292 83.8302 25.6459 10.1005 17.944 33.3835C10.2422 56.6666 81.8695 83.8302 63.385 106.337C44.9005 128.844 17.9441 77.6214 1 68.3082" stroke="#341D12" strokeWidth="4" />
               </svg>
             </div>
