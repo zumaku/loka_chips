@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react"
 import gsap, {Back} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import MainProduct from "./product/MainProduct"
+import { MainProduct, DetailProduct } from "./product/"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -37,6 +37,7 @@ const Product = () => {
 
       <MainProduct />
 
+      <DetailProduct />
       
     </div>
   );
