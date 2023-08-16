@@ -54,6 +54,14 @@ const Product = () => {
         start:"top 80%",
       }
     })
+    gsap.to(halfCrRef.current, {
+      scale:1.5,
+      scrollTrigger: {
+        trigger: halfCrRef.current,
+        start: "-50% 80%",
+        scrub: true,
+      },
+    })
 
     // List on the right section animation
     gsap.to(listRef.current, {
@@ -151,8 +159,8 @@ const Product = () => {
 
           {/* Mid Part */}
           <div className="mid p-5 flex flex-col justify-center items-center z-[2]">
-            <div ref={imgPdtRef} className="opacity-0 translate-y-28" >
-              <img className="max-w-[247px] mb-10 sm:mb-16" src={product.img} alt="Loka Chips Rasa original" />
+            <div ref={imgPdtRef} className="opacity-0 translate-y-28 hover:cursor-pointer" >
+              <img className="max-w-[247px] mb-10 sm:mb-16 hover:scale-105 transition-all duration-1000 hover:-rotate-1" src={product.img} alt="Loka Chips Rasa original" />
             </div>
             <div className="arrows w-full flex justify-center items-center">
               <div
