@@ -36,6 +36,11 @@ const Product = () => {
     console.log(object)
   }
 
+  // Menampilkan detail view jika detailProductnya null / belum ada object yang diterima
+  const activateDetailProduct = () => {
+    if(detailProduct !== null) return <DetailProduct product={detailProduct} handleDetailActive={handleDetailActive} />
+  }
+
   return (
     <div className="relative w-full">
       
@@ -45,6 +50,7 @@ const Product = () => {
       <MainProduct handleDetailActive={handleDetailActive} />
 
       {/* <DetailProduct /> */}
+      {activateDetailProduct()}
       
     </div>
   );
