@@ -8,7 +8,7 @@ import {produks} from "../../constants"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const MainProduct = () => {
+const MainProduct = (props) => {
     const [curIndex, setCurIndex]  = useState(0)
     const product = produks[curIndex]
 
@@ -19,8 +19,6 @@ const MainProduct = () => {
     const taglineRef2 = useRef(null)
 
     useEffect(() => {
-        console.log(product.title)
-
         // Using Splittype Packed to split the title
         // https://www.npmjs.com/package/split-type?activeTab=readme
         const title = new SplitType("#titleProduct")
@@ -116,6 +114,11 @@ const MainProduct = () => {
         })
     }
 
+    // Mengirim Object Yang sedang aktif ke parent element saat lihat detail atau gambar diklik
+    const sendObject = (product) => {
+        props.handleDetailActive(product)
+    }
+
     return(
         <div className={`max-w-[1300px] m-auto`} id="produk">
             {/* Title */}
@@ -132,13 +135,20 @@ const MainProduct = () => {
                     <div ref={taglineRef1} className="w-0 h-full bg-yellow-300 absolute"></div>
                     <p ref={taglineRef2} className="opacity-0">{product.tagline}</p>
                     </div>
-                    <button className={`${style.btnChocolate} mb-10 sm:mb-0`}>Lihat Detail</button>
+                    <button
+                        className={`${style.btnChocolate} mb-10 sm:mb-0`}
+                        onClick={() => sendObject(product)}
+                    >Lihat Detail</button>
                 </div>
 
                 {/* Mid Part */}
                 <div className="mid p-5 flex flex-col justify-center items-center z-[2]">
-                    <div ref={imgPdtRef} className="opacity-0 translate-y-28 hover:cursor-pointer" >
-                    <img className="max-w-[247px] mb-10 sm:mb-16 hover:scale-105 transition-all duration-1000 hover:-rotate-1" src={product.img} alt="Loka Chips Rasa original" />
+                    <div
+                        ref={imgPdtRef}
+                        className="opacity-0 translate-y-28 hover:cursor-pointer"
+                        onClick={() => sendObject(product)}
+                    >
+                        <img className="max-w-[247px] mb-10 sm:mb-16 hover:scale-105 transition-all duration-1000 hover:-rotate-1" src={product.img} alt="Loka Chips Rasa original" />
                     </div>
                     <div className="arrows w-full flex justify-center items-center">
                     <div
