@@ -24,7 +24,7 @@ const MainProduct = () => {
         // Using Splittype Packed to split the title
         // https://www.npmjs.com/package/split-type?activeTab=readme
         const title = new SplitType("#titleProduct")
-        gsap.to(".char", {
+        gsap.to(title.chars, {
             duration:.1,
             stagger: .05,
             y:-5,
@@ -92,7 +92,7 @@ const MainProduct = () => {
         };
     
         animateSVG();
-    })
+    }, [])
 
     const prevImg = () => {
         setCurIndex((prevIndex) => (prevIndex === 0 ? produks.length - 1 : prevIndex - 1))
