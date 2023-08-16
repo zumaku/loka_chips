@@ -24,3 +24,8 @@ html {
 .text-stroke-4 {
   -webkit-text-stroke: 4px #341D12;
 }
+
+.char{
+  transform: translateY(100%);
+  transition:  all .5s;
+}

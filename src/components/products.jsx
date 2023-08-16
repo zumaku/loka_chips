@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import gsap, {Back, Power4} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import SplitType from 'split-type'
 import style from "../styles"
 import {produks} from "../constants"
 
@@ -18,8 +19,18 @@ const Product = () => {
   const taglineRef2 = useRef(null)
 
   useEffect(() => {
-    // console.log(taglines[0][curIndex].tagline)
-    // console.log(taglines)
+    // Using Splittype Packed to split the title
+    // https://www.npmjs.com/package/split-type?activeTab=readme
+    const title = new SplitType("#titleProduct")
+    gsap.to(".char", {
+      duration:.1,
+      stagger: .05,
+      y:-5,
+      scrollTrigger:{
+        trigger:".char",
+        start:"top 80%"
+      }
+    })
 
     // Img1 Products annimation
     gsap.to(imgPdtRef.current, {
@@ -124,7 +135,7 @@ const Product = () => {
         {/* Title */}
         <div className="secTitle text-center mb-5">
           <h3 className={`${style.heading2}`}>Varian Produk</h3>
-          <h1 className={`${style.headingS} text-5xl sm:text-[64px]`}>{product.title}</h1>
+          <h1 id="titleProduct" className={`${style.headingS} text-5xl sm:text-[64px] bg-clip-border overflow-hidden`}>{product.title}</h1>
         </div>
 
         {/* 1st Slide */}
