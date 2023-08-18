@@ -1,46 +1,74 @@
 import { useEffect, useRef } from "react"
 import gsap, {Back, Power4} from "gsap"
+import useScrollBlock from "../../custonhooks/useScrollBlock"
 import style from "../../styles"
 
-
 const DetailProduct = (props) => {
-    const product = props.product
+    const [blockScroll, allowScroll] = useScrollBlock()
+
     const container = useRef(null)
+    const title = useRef(null)
+    const subTitle = useRef(null)
+    const paragraph1 = useRef(null)
+    const paragraph2 = useRef(null)
+    const btn = useRef(null)
+    const img = useRef(null)
 
+    const detailTl = gsap.timeline({defaults:{duration:1, ease:Power4.easeOut}})
+    
     useEffect(()=>{
-        // gsap.to(container, {
-        //     opacity:1,
-        //     duration:1,
-        //     delay:2
-        // })
-    }, [])
+        if(props.isDetailActive){
+            detailTl.to(container.current, {opacity: 1, x: 0})
+                    .to(title.current, {opacity: 1, x: 0})
+                    .to(subTitle.current, {opacity: 1})
+                    .to(img.current, {scale:1, ease:Back.easeOut}, "-=1.5")
+                    .to(paragraph1.current, {y:0, opacity:1, ease:Back.easeOut}, "-=.8")
+                    .to(paragraph2.current, {y:0, opacity:1, ease:Back.easeOut}, "-=.8")
+                    .to(btn.current, {scale:1, duration:.8})
+            // blockScroll()
+        } else{
+            detailTl.to(container.current, {opacity: 0, x: "-100%"})
+            // allowScroll()
+        }
+    }, [props.isDetailActive])
 
-    // Mengirim nilai null kembali
-    const sendObject = () => {
-        props.handleDetailActive(null)
-    }
-
-    const settitleColor = () => {
-        if(product.id === "original") return "text-primary"
-        else if(product.id === "chocholate") return "text-chocholate"
-        else if(product.id === "balado") return "text-balado"
-        else return "text-black"
+    const setTitleColor = () => {
+        if (props.product.id === "chocholate") return "text-chocholate"
+        else if (props.product.id === "balado") return "text-balado"
+        else return "text-primary"
     }
 
     return(
-        <div ref={container} className="w-full h-full absolute top-0 shadow-xl z-30 transition-all bg-white">
-            <div className="max-w-[1300px] p-4 ss:p-6 sm:px-10 sm:py-16 flex flex-col sm:flex-row justify-between items-end sm:items-start">
-                <div className="sm:w-2/3 sm:mr-5">
-                    <h1 className={`${style.heading1 } mb-4`}>
-                        Varian
-                        <span className={settitleColor()}> {product.title}</span>
+        <div
+            ref={container} className="absolute top-0 left-0 right-0 bottom-0 bg-white overflow-y-scroll w-full z-30 flex -translate-x-full opacity-full"
+        >
+            <div className={`max-w-[1300px] m-auto p-6 flex flex-col sm:flex-row sm:py-10 lg:py-18 w-full ${style.paddingX}`}>
+                <div className="mb-10 sm:mr-6 max-w-xl">
+                    <h1
+                        ref={title}
+                        className={`${style.heading1} mb-4 opacity-0 -translate-x-10`}
+                    >
+                        Varian 
+                        <span
+                            ref={subTitle}
+                            className={`${setTitleColor()} opacity-50 overflow-hidden`}
+                        > {props.product.title}</span>
                     </h1>
-                    <p className={`${style.paragraph} mb-10`}>{product.detail.desc}</p>
-                    <button className={`${style.btnChocolate}`} onClick={sendObject}>Kembali</button>
+                    <p
+                        ref={paragraph1}
+                        className={`${style.paragraph} mb-8 translate-y-10 opacity-0`}
+                    >{props.product.detail.desc1}</p>
+                    <p
+                        ref={paragraph2}
+                        className={`${style.paragraph} mb-8 translate-y-10 opacity-0`}
+                    >{props.product.detail.desc2}</p>
+                    <bottom
+                        ref={btn}
+                        className={`${style.btnChocolate} scale-0 hover:cursor-pointer`}
+                        onClick={() => props.setIsDetailActive(false)}
+                    >Kembali</bottom>
                 </div>
-                <div className="w-40 ss:w-46 sm:w-1/4">
-                    <img className="m-auto drop-shadow-lg" src={product.detail.img} alt={`Loka Chips ${product.title}`} />
-                </div>
+                <img ref={img} className="w-1/2 sm:w-1/3 lg:w-72 m-auto scale-0" src={props.product.detail.img} alt="" />
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react"
+import { useRef, useEffect } from "react"
 import gsap, {Back, Power4} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import SplitType from 'split-type'
@@ -9,8 +9,6 @@ import {produks} from "../../constants"
 gsap.registerPlugin(ScrollTrigger)
 
 const MainProduct = (props) => {
-    const [curIndex, setCurIndex]  = useState(0)
-    const product = produks[curIndex]
 
     const imgPdtRef = useRef(null)
     const listRef = useRef(null)
@@ -93,12 +91,12 @@ const MainProduct = (props) => {
     }, [])
 
     const prevImg = () => {
-        setCurIndex((prevIndex) => (prevIndex === 0 ? produks.length - 1 : prevIndex - 1))
+        props.setCurIndex((prevIndex) => (prevIndex === 0 ? 3 - 1 : prevIndex - 1))
         handleShake(imgPdtRef)
     };
 
     const nextImg = () => {
-        setCurIndex((prevIndex) => (prevIndex === produks.length - 1 ? 0 : prevIndex + 1))
+        props.setCurIndex((prevIndex) => (prevIndex === 3 - 1 ? 0 : prevIndex + 1))
         handleShake(imgPdtRef)
     };
 
@@ -114,17 +112,12 @@ const MainProduct = (props) => {
         })
     }
 
-    // Mengirim Object Yang sedang aktif ke parent element saat lihat detail atau gambar diklik
-    const sendObject = (product) => {
-        props.handleDetailActive(product)
-    }
-
     return(
         <div className={`max-w-[1300px] m-auto`} id="produk">
             {/* Title */}
             <div className="secTitle text-center mb-5">
                 <h3 className={`${style.heading2}`}>Varian Produk</h3>
-                <h1 id="titleProduct" className={`${style.headingS} text-5xl sm:text-[64px] bg-clip-border overflow-hidden`}>{product.title}</h1>
+                <h1 id="titleProduct" className={`${style.headingS} text-5xl sm:text-[64px] bg-clip-border overflow-hidden`}>{props.product.title}</h1>
             </div>
 
             {/* Main Content */}
@@ -133,11 +126,11 @@ const MainProduct = (props) => {
                 <div className="left sm:pt-20 text-center sm:text-start z-[2]">
                     <div className="tagline mb-8 sm:max-w-sm overflow-hidden relative">
                     <div ref={taglineRef1} className="w-0 h-full bg-yellow-300 absolute"></div>
-                    <p ref={taglineRef2} className="opacity-0">{product.tagline}</p>
+                    <p ref={taglineRef2} className="opacity-0">{props.product.tagline}</p>
                     </div>
                     <button
                         className={`${style.btnChocolate} mb-10 sm:mb-0`}
-                        onClick={() => sendObject(product)}
+                        onClick={() => props.setIsDetailActive(true)}
                     >Lihat Detail</button>
                 </div>
 
@@ -145,10 +138,9 @@ const MainProduct = (props) => {
                 <div className="mid p-5 flex flex-col justify-center items-center z-[2]">
                     <div
                         ref={imgPdtRef}
-                        className="opacity-0 translate-y-28 hover:cursor-pointer"
-                        onClick={() => sendObject(product)}
+                        className="opacity-0 translate-y-28"
                     >
-                        <img className="max-w-[247px] mb-10 sm:mb-16 hover:scale-105 transition-all duration-1000 hover:-rotate-1" src={product.img} alt="Loka Chips Rasa original" />
+                        <img className="max-w-[247px] mb-10 sm:mb-16 hover:scale-105 transition-all duration-1000 hover:-rotate-1" src={props.product.img} alt="Loka Chips Rasa original" />
                     </div>
                     <div className="arrows w-full flex justify-center items-center">
                     <div

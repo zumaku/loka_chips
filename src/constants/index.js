@@ -35,10 +35,12 @@ export const produks = [
         tagline: "Rasa Asli dan Autentik, Kerenyahan Pisang Sejati",
         img: original1,
         detail: {
-            desc:
-                "Loka Chips Rasa Original, pilihan utama pencinta kerupuk yang menghargai kesederhanaan rasa. Terbuat dari pisang pilihan Selayar yang diolah hati-hati, setiap kerupuk hadir dengan cita rasa autentik pisang segar yang sulit ditolak. Tanpa campuran apa pun, Loka Chips Rasa Original memberikan pengalaman kerupuk pisang murni, menawarkan kelezatan Selayar dalam bentuk sederhana namun memikat. Cocok untuk segala kesempatan, menjadi teman setia mereka yang mencari cita rasa pisang otentik dan khas dalam setiap gigitan.",
-            img: original2
-        }
+                desc1:
+                    "Loka Chips Rasa Original adalah pilihan utama bagi pencinta kerupuk yang menghargai kesederhanaan dalam cita rasa. Terbuat dari pisang pilihan Selayar yang diolah dengan hati-hati, setiap kerupuk menghadirkan rasa autentik pisang yang segar dan kenyal yang sulit ditolak.",
+                desc2:
+                    "Tanpa campuran apa pun, Loka Chips Rasa Original menghadirkan pengalaman kerupuk pisang yang murni.  Nikmaati kelezatan pisang Selayar dalam bentuk yang sederhana namun memikat. Cocok untuk dinikmati di berbagai kesempatan, menjadi teman setia bagi mereka yang menginginkan cita rasa pisang yang otentik dan khas dalam setiap gigitannya.",
+                img: original2
+            }
     },
     {
         id: "chocholate",
@@ -46,10 +48,12 @@ export const produks = [
         tagline: "Manisnya Kelezatan dengan Sentuhan Coklat",
         img: chocholate1,
         detail: {
-            desc:
-                "Loka Chips Rasa Coklat mengajakmu merasakan kelezatan manis yang memikat, memadukan kerupuk renyah dengan coklat yang menggoda. Rasakan perpaduan kekenyalan pisang Selayar dan sensasi coklat lezat yang melumer di mulutmu. Dengan coklat cair yang memeluk setiap kerupuk, Loka Chips Rasa Coklat cocok dinikmati sendiri atau dibagikan, membawa manisnya kelezatan dalam setiap momen. Terhanyut dalam kelezatan manis dan renyah yang tak tertandingi, setiap gigitan membawamu pada perjalanan rasa yang memikat dan menggugah selera.",
-            img: chocholate2
-        }
+                desc1:
+                    "Loka Chips Rasa Coklat mengajakmu untuk merasakan kelezatan manis yang memikat, menggabungkan kerupuk renyah dengan sentuhan coklat yang menggoda. Setiap gigitan adalah perpaduan sempurna antara kekenyalan pisang Selayar dan sensasi coklat lezat yang melumer di mulutmu.",
+                desc2:
+                    "Rasakan petualangan rasa dengan Loka Chips Rasa Coklat, di mana coklat cair memeluk setiap kerupuk, menciptakan harmoni manis yang luar biasa bersama kelembutan pisang. Cocok untuk dinikmati sendiri atau dibagikan, Loka Chips Rasa Coklat membawa manisnya kelezatan dalam setiap momen. Biarkan dirimu terhanyut dalam kelezatan manis dan renyah yang tak tertandingi, dengan setiap gigitan membawamu pada perjalanan rasa yang memikat dan menggugah selera.",
+                img: chocholate2
+            }
     },
     {
         id: "balado",
@@ -57,10 +61,12 @@ export const produks = [
         tagline: "Gelora Pedas Berpadu dengan Kenikmatan Pisang",
         img: balado1,
         detail: {
-            desc:
-                "Loka Chips Rasa Balado mengajakmu merasakan petualangan pedas yang menggairahkan. Terbuat dengan bubuk balado pilihan, produk ini menggabungkan keunikan pisang Selayar dengan sentuhan pedas. Setiap gigitan kerupuk renyah dihiasi lapisan rasa balado yang membara, memadukan kelezatan pisang dan kegilaan pedas. Cocok bagi pecinta pedas atau yang ingin mencoba hal baru, Loka Chips Rasa Balado adalah pilihan tepat. Rasakan sensasi pedas dan kenikmatan pisang dalam setiap gigitan, biarkan rasa balado ini memanjakan lidahmu dalam petualangan rasa yang menggetarkan.",
-            img: balado2
-        }
+                desc1:
+                    "Loka Chips Rasa Balado memikat dengan sensasi pedas dalam setiap kerupuk, mengajakmu pada petualangan rasa yang menggairahkan. Dibuat dengan cermat menggunakan bubuk balado pilihan, produk ini menggabungkan keunikan pisang Selayar dengan sentuhan pedas yang khas. Setiap gigitan kerupuk renyah dihiasi dengan lapisan rasa balado yang membara, menghadirkan perpaduan tak terlupakan antara kelezatan pisang dan kegilaan pedas.",
+                desc2:
+                    "Apakah kamu pecinta pedas atau ingin mencoba yang baru, Loka Chips Rasa Balado adalah pilihan tepat. Rasakan kenikmatan pisang yang berpadu dengan gelora pedas dalam setiap gigitan, dan biarkan rasa balado ini memanjakan lidahmu dalam sebuah petualangan rasa yang menggetarkan.",
+                img: balado2
+            }
     },
 ];
 

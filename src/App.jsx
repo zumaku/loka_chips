@@ -12,9 +12,8 @@ function App() {
         <Home />
       </div>
 
-      <div className={`${style.paddingX}  py-10 w-full h-fit bg-primary text-txtcolor overflow-hidden`}>
-        <Product />
-      </div>
+      
+      <Product />
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br />
 
