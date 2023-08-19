@@ -26,7 +26,7 @@ const Tips = () => {
   }, [])
 
   return (
-    <div className={`${style.paddingX} w-full`}>
+    <div className={`${style.paddingX} w-full mb-20`}>
       <div className="max-w-[1300px] m-auto flex flex-col items-center">
         <h1
           ref={startAnimating}
