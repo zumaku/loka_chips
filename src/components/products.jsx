@@ -36,7 +36,7 @@ const Product = () => {
   }, [])
 
   return (
-    <div className={`${style.paddingX} relative py-10 w-full h-fit bg-primary text-txtcolor`}>
+    <div className={`${style.paddingX} relative overflow-hidden py-10 w-full h-fit bg-primary text-txtcolor`}>
       <div className="relative w-full">
         
         {/* Half Circle */}
