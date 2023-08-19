@@ -1,4 +1,4 @@
-import { Navbar, Home, Product, Tips } from "./components"
+import { Navbar, Home, Product, Tips, Banner } from "./components"
 
 function App() {
 
@@ -8,6 +8,7 @@ function App() {
       <Home />
       <Product />
       <Tips />
+      <Banner />
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br />
 
