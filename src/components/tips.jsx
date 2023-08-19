@@ -19,19 +19,19 @@ const Tips = () => {
   }, [])
 
   return (
-    <div className={`${style.paddingX}w-full`}>
+    <div className={`${style.paddingX} w-full`}>
       <div className="max-w-[1300px] m-auto flex flex-col items-center">
         <h1 className={`${style.heading2} my-10 sm:my-16`}>Enjoy Loka Chips</h1>
         <div
           ref={tipsRef}
-          className="flex flex-col sl:flex-row justify-between translate-y-52"
+          className="flex flex-col sl:flex-row items-center justify-between translate-y-52"
         >
           {enjoy.map((tips) => (
             <div
               key={tips.id}
               className={`${
-                tips.id === "enjoy2" ? "w-1/3" : "w-1/4"
-              } flex flex-col items-center text-center`}
+                tips.id === "enjoy2" ? "sl:w-1/3" : "sl:w-1/4"
+              } w-full flex flex-col items-center text-center`}
               id={tips.id}
             >
               <img src={tips.img} className="mb-5 sl:mb-12" alt="Enjoy Loka Chips" />
