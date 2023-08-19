@@ -109,7 +109,7 @@ const MainProduct = (props) => {
     }
 
     return(
-        <div className={`max-w-[1300px] m-auto`} id="produk">
+        <div className={`max-w-[1300px] m-auto py-10`} id="produk">
 
             <div className="secTitle text-center mb-5">
                 <h3 className={`${style.heading2}`}>Varian Produk</h3>

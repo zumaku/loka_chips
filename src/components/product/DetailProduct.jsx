@@ -36,9 +36,9 @@ const DetailProduct = (props) => {
     return(
         <div
             ref={container}
-            className="absolute top-0 left-0 right-0 bottom-0 bg-white overflow-y-scroll sm:overflow-hidden w-full z-30 flex translate-y-full opacity-full"
+            className="absolute top-0 left-0 h-full bg-white overflow-y-scroll sm:overflow-hidden w-full z-30 flex translate-y-full opacity-full"
         >
-            <div className={`max-w-[1300px] m-auto p-6 flex flex-col sm:flex-row sm:py-10 lg:py-18 w-full ${style.paddingX}`}>
+            <div className={`max-w-[1300px] m-auto p-6 flex flex-col sm:flex-row sm:justify-center sm:py-10 lg:py-18 w-full ${style.paddingX}`}>
                 <div className="mb-10 sm:mr-6 max-w-xl">
                     <h1
                         ref={title}
