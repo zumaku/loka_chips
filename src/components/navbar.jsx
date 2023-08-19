@@ -65,14 +65,14 @@ const Navbar = () => {
       navLinks.map((nav)=>{
         tl.fromTo("#nav-" + nav.id, {opacity:0, y:'20px'}, {duration:.3, opacity:1, y:0})
       })
-      
+
       blockScroll()
     }
     setToggle(() => !toggle)
   }
 
   return (
-    <div className={`${style.paddingX} fixed w-full bg-primary navContainer z-40`} id="navbar-container">
+    <div className={`${style.paddingX} fixed w-full bg-primary navContainer z-40 shadow-md`} id="navbar-container">
       <nav className="flex justify-between items-center relative max-w-[1300px] py-3 sm:py-4 m-auto">
         <div className="w-24 z-10 max-w-7xl">
           <a href="/"><img src={logo} alt="Loka Chips Logo" /></a>
