@@ -38,14 +38,9 @@ const Product = () => {
   return (
     <div className={`${style.paddingX} relative overflow-hidden py-10 w-full h-fit bg-primary text-txtcolor`}>
       <div className="relative w-full">
-        
-        {/* Half Circle */}
         <div ref={halfCrRef} className="absolute productCircle h-72 sm:h-[700px] lg:h-[650px] bg-white bottom-[-130px] sm:-bottom-1/2 -left-20 -right-20 lg:-right-32 lg:-left-32 rounded-[50%] z-[1] translate-y-full"></div>
-
         <MainProduct product={product} setCurIndex={setCurIndex} setIsDetailActive={setIsDetailActive} />
       </div>
-
-      {/* Detail */}
       <DetailProduct product={product} isDetailActive={isDetailActive} setIsDetailActive={setIsDetailActive} />
     </div>
   );
