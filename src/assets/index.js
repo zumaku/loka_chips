@@ -10,6 +10,7 @@ import enjoy1 from "./studying.svg";
 import enjoy2 from './discussion.svg';
 import enjoy3 from './Working.svg';
 import uinimg from "./uin_img.png";
+import white_location from "./white_location.svg"
 import gallery1 from "./gallery1.png";
 import gallery2 from "./gallery2.png";
 import gallery3 from "./gallery3.png";
@@ -39,6 +40,7 @@ export {
     enjoy2,
     enjoy3,
     uinimg,
+    white_location,
     gallery1,
     gallery2,
     gallery3,
