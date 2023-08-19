@@ -4,7 +4,7 @@ import { uinimg, white_location } from "../assets"
 
 const Banner = () => {
   return (
-    <div className={`${style.paddingX} h-[400px] overflow-hidden w-full bg-red-400 bg-no-repeat bg-cover bg-center relative `} style={{ backgroundImage: `url(${uinimg})` }}>
+    <div className={`${style.paddingX} h-[400px] overflow-hidden w-full bg-no-repeat bg-cover bg-center relative `} style={{ backgroundImage: `url(${uinimg})` }}>
       <div className="max-w-[1300px] h-full text-white m-auto flex flex-col justify-center items-center">
         <h2 className={`${style.heading2} mb-4`}>Gratis Ongkir</h2>
         <p className={`${style.paragraph} mb-10 sm:w-2/3 text-center`}>
