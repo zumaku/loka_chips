@@ -5,14 +5,8 @@ function App() {
 
   return (
     <div className="w-full overflow-hidden text-[18px] font-poppins h-fit">
-      
       <Navbar />
-
-      <div className={`${style.paddingX} w-full h-fit sl:h-screen bg-primary text-txtcolor`}>
-        <Home />
-      </div>
-
-      
+      <Home />
       <Product />
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br />
