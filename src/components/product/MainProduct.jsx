@@ -139,6 +139,7 @@ const MainProduct = (props) => {
                     <div
                         ref={imgPdtRef}
                         className="opacity-0 translate-y-28"
+                        onClick={() => props.setIsDetailActive(true)}
                     >
                         <img className="max-w-[247px] mb-10 sm:mb-16 hover:scale-105 transition-all duration-1000 hover:-rotate-1" src={props.product.img} alt="Loka Chips Rasa original" />
                     </div>
