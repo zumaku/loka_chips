@@ -7,6 +7,7 @@ import { enjoy } from "../constants"
 gsap.registerPlugin(ScrollTrigger)
 
 const Tips = () => {
+  
   const startAnimating = useRef(null)
 
   useEffect(() => {

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import gsap, {Power4} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import useScrollBlock from "../custonhooks/useScrollBlock"
+
 import {logo} from "../assets"
 import {navLinks} from "../constants"
 import style from "../styles";
@@ -9,6 +10,7 @@ import style from "../styles";
 gsap.registerPlugin(ScrollTrigger)
 
 const Navbar = () => {
+
   const [toggle, setToggle] = useState(false)
   const [blockScroll, allowScroll] = useScrollBlock()
   const tl = gsap.timeline({ease: Power4.easeOut})
@@ -17,12 +19,10 @@ const Navbar = () => {
     const showNav = gsap.to('.navContainer', {
       y:-100,
       duration:.7,
-      // delay: .3,
       ease:Power4.easeInOut
     })
 
     showNav.pause()
-    // gsap.fromTo(".navContainer", {y:-100, duration:1}, {y:0, delay:1.8})
     
     ScrollTrigger.create({
       start: "top top",
@@ -45,7 +45,7 @@ const Navbar = () => {
 
       // Nav items
       tl.to(".nav-item", {opacity:0, y:'20px', duration:.3})
-      .to('.mobileMenu', {y:'-100%', duration:.5})
+        .to('.mobileMenu', {y:'-100%', duration:.5})
 
       allowScroll()
     } else{     // Saat Navbar dibuka
@@ -65,6 +65,7 @@ const Navbar = () => {
       navLinks.map((nav)=>{
         tl.fromTo("#nav-" + nav.id, {opacity:0, y:'20px'}, {duration:.3, opacity:1, y:0})
       })
+      
       blockScroll()
     }
     setToggle(() => !toggle)

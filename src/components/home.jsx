@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
-import style from "../styles"
-import {heroimg} from "../assets"
 import gsap, {Power4, Back} from "gsap"
 
+import style from "../styles"
+import {heroimg} from "../assets"
+
 const Home = () => {
+
   const [lebarWin, setLebarWin] = useState(window.innerWidth);
   const scrollTl = gsap.timeline({ease: Power4.easeIn, repeat: -1, yoyo: true, delay:.3})
   
@@ -23,11 +25,10 @@ const Home = () => {
           .fromTo(".button2", {y:30, opacity:0, ease:Back.easeIn}, {y:0, opacity:1}, "-=.6")
     heroImgTl.fromTo(".imgHero", {scale:1, y:0, duration:10, delay:5}, {scale:"1.02", y:-5, repeat:-1, yoyo:true})
     
-
-
     // Event Listener untuk ukuran window
     window.addEventListener("resize", handleResize);
     lebarWin <= 930 ? homeTl.to(".scrollAnim", {opacity:0}) : homeTl.fromTo(".scrollAnim", {duration:.3, y:10, opacity:0}, {y:0, opacity:1})
+    
     return () => {
       window.removeEventListener("resize", handleResize);
     };

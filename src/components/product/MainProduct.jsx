@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import SplitType from 'split-type'
 
 import style from "../../styles"
-import {produks} from "../../constants"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,8 +16,7 @@ const MainProduct = (props) => {
     const taglineRef2 = useRef(null)
 
     useEffect(() => {
-        // Using Splittype Packed to split the title
-        // https://www.npmjs.com/package/split-type?activeTab=readme
+
         const title = new SplitType("#titleProduct")
         gsap.to(title.chars, {
             duration:.1,
@@ -37,8 +35,8 @@ const MainProduct = (props) => {
             y:0,
             ease:Back.easeOut,
             scrollTrigger: {
-            trigger:imgPdtRef.current,
-            start:"top 80%",
+                trigger:imgPdtRef.current,
+                start:"top 80%",
             }
         })
 
@@ -46,10 +44,8 @@ const MainProduct = (props) => {
         gsap.to(listRef.current, {
             y:0,
             scrollTrigger: {
-            trigger:imgPdtRef.current,
-            start:"120px center",
-            // toggleActions: "play none none none"
-            // toggleActions: "restart none none none"
+                trigger:imgPdtRef.current,
+                start:"120px center",
             }
         })
     
@@ -107,22 +103,22 @@ const MainProduct = (props) => {
             repeat: 5,
             yoyo: true,
             onComplete: () => {
-            gsap.set(e.current, { x: 0 }); // Reset the position after shaking
+                gsap.set(e.current, { x: 0 }); // Reset the position after shaking
             },
         })
     }
 
     return(
         <div className={`max-w-[1300px] m-auto`} id="produk">
-            {/* Title */}
+
             <div className="secTitle text-center mb-5">
                 <h3 className={`${style.heading2}`}>Varian Produk</h3>
                 <h1 id="titleProduct" className={`${style.headingS} text-5xl sm:text-[64px] bg-clip-border overflow-hidden`}>{props.product.title}</h1>
             </div>
 
-            {/* Main Content */}
             <div className="slide1 grid sm:grid-cols-3 grid-cols-1">
-                {/* Left Part */}
+
+                {/* Left */}
                 <div className="left sm:pt-20 text-center sm:text-start z-[2]">
                     <div className="tagline mb-8 sm:max-w-sm overflow-hidden relative">
                     <div ref={taglineRef1} className="w-0 h-full bg-yellow-300 absolute"></div>
@@ -134,7 +130,7 @@ const MainProduct = (props) => {
                     >Lihat Detail</button>
                 </div>
 
-                {/* Mid Part */}
+                {/* Mid */}
                 <div className="mid p-5 flex flex-col justify-center items-center z-[2]">
                     <div
                         ref={imgPdtRef}
@@ -164,7 +160,7 @@ const MainProduct = (props) => {
                     </div>
                 </div>
 
-                {/* Right Part */}
+                {/* Right */}
                 <div className="right relative flex justify-center items-center z-[2]">
                     <div className="w-fit hidden sm:block sm:absolute md:static bottom-0 lg:static">
                     <svg ref={ropeRef} className="rope_shape" width="127" height="114" viewBox="0 0 127 114" fill="none" xmlns="http://www.w3.org/2000/svg">
