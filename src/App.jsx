@@ -1,5 +1,4 @@
-import style from "./styles"
-import { Navbar, Home, Product } from "./components"
+import { Navbar, Home, Product, Tips } from "./components"
 
 function App() {
 
@@ -8,6 +7,7 @@ function App() {
       <Navbar />
       <Home />
       <Product />
+      <Tips />
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br />
 
