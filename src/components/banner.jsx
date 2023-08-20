@@ -12,7 +12,7 @@ const Banner = () => {
           <span className="font-bold"> gratis </span>
           untuk daerah
           <span className="font-bold"> Samata </span>
-          dan sekitarnya. Dapatkan Loka Chips di kantin-kantin kampus UIN Makassar
+          dan sekitarnya. Dapatkan Loka Chips di kantin-kantin kampus UIN Makassar.
         </p>
         <div className="flex font-bold justify-center items-center w-fit">
           <img src={white_location} alt="Icon Lokasi" className="mr-5" />
