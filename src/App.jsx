@@ -1,14 +1,15 @@
-import { Navbar, Home, Product, Tips, Banner } from "./components"
+import { Navbar, Home, Product, Tips, Banner, Testimonials } from "./components"
 
 function App() {
 
   return (
     <div className="w-full overflow-hidden text-[18px] font-poppins h-fit">
-      <Navbar />
+      {/* <Navbar />
       <Home />
       <Product />
-      <Tips />
+      <Tips /> */}
       <Banner />
+      <Testimonials />
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br />
 
