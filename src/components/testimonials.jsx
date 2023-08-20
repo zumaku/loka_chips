@@ -27,8 +27,8 @@ const Testimonials = () => {
   };
 
   return (
-    <div className={`w-full py-20`}>
-      <h1 className={`${style.heading1} text-center`}>Apa Kata Mereka</h1>
+    <div className={`w-full py-20`} id="testimoni">
+      <h1 className={`${style.heading2} text-center`}>Apa Kata Mereka</h1>
       <Carousel
         className="h-[500px] max-w-[1500px] mx-auto"
         responsive={responsive}
