@@ -27,13 +27,14 @@ const Testimonials = () => {
   };
 
   return (
-    <div className={`w-full py-20 bg-red-200`}>
+    <div className={`w-full py-20`}>
       <h1 className={`${style.heading1} text-center`}>Apa Kata Mereka</h1>
       <Carousel
-        className="bg-blue-100 h-[500px] max-w-[1500px] mx-auto"
+        className="h-[500px] max-w-[1500px] mx-auto"
         responsive={responsive}
         showDots={true}
         infinite={true}
+        draggable={false}
       >
         {testimonials.map((testimoni) => {
           return (

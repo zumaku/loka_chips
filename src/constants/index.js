@@ -107,7 +107,7 @@ export const testimonials = [
         by: "Prof. Anita W.",
         an: "Dosen Matematika",
         content:
-            "Sebagai seorang dosen, saya mengapresiasi Loka Chips sebagai pilihan cemilan yang sehat dan lezat bagi mahasiswa. Saya sering melihat mahasiswa saya membawa Loka Chips saat kelas atau konsultasi. Produk ini memberikan kelezatan dan energi yang dibutuhkan."
+            "bagai dosen, saya mengapresiasi Loka Chips sebagai pilihan cemilan sehat dan lezat bagi mahasiswa. Saya sering melihat mahasiswa membawa Loka Chips saat kelas atau konsultasi, memberikan energi yang dibutuhkan."
     },
     {
         id: "testi3",

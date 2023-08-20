@@ -29,3 +29,7 @@ html {
   transform: translateY(100%);
   transition:  all .5s;
 }
+
+.react-multiple-carousel__arrow{
+  background-color: #341d122c;
+}

@@ -4,10 +4,10 @@ function App() {
 
   return (
     <div className="w-full overflow-hidden text-[18px] font-poppins h-fit">
-      {/* <Navbar />
+      <Navbar />
       <Home />
       <Product />
-      <Tips /> */}
+      <Tips />
       <Banner />
       <Testimonials />
 
