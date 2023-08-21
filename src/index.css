@@ -32,4 +32,5 @@ html {
 
 .react-multiple-carousel__arrow{
   background-color: #341d122c;
+  z-index: 10;
 }
