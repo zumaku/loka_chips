@@ -13,15 +13,15 @@ const Testimonials = () => {
       items: 3
     },
     desktop: {
-      breakpoint: { max: 1200, min: 930 },
+      breakpoint: { max: 1200, min: 1060 },
       items: 3
     },
     tablet: {
-      breakpoint: { max: 930, min: 620 },
+      breakpoint: { max: 1060, min: 768 },
       items: 2
     },
     mobile: {
-      breakpoint: { max: 620, min: 0 },
+      breakpoint: { max: 768, min: 0 },
       items: 1
     }
   };
@@ -30,7 +30,7 @@ const Testimonials = () => {
     <div className={`w-full py-20`} id="testimoni">
       <h1 className={`${style.heading2} text-center`}>Apa Kata Mereka</h1>
       <Carousel
-        className="h-[500px] max-w-[1500px] mx-auto"
+        className="h-[300px] sm:h-[500px] max-w-[1500px] mx-auto"
         responsive={responsive}
         showDots={true}
         infinite={true}
