@@ -30,7 +30,7 @@ const Testimonials = () => {
     <div className={`w-full py-20 mb-20`} id="testimoni">
       <h1 className={`${style.heading2} text-center`}>Apa Kata Mereka</h1>
       <Carousel
-        className="h-[300px] sm:h-[500px] max-w-[1500px] mx-auto"
+        className="h-[350px] sm:h-[500px] max-w-[1500px] mx-auto"
         responsive={responsive}
         showDots={true}
         infinite={true}
