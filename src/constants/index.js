@@ -1,4 +1,4 @@
-import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy1, enjoy2, enjoy3, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, location, email, world, instagram, whatsapp } from "../assets";
+import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy1, enjoy2, enjoy3, thumbNgallery, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7, thumb8, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, location, email, world, instagram, whatsapp } from "../assets";
 
 export const navLinks = [
     {
@@ -135,49 +135,57 @@ export const testimonials = [
 export const gallerys = [
     {
         id: "gallery1",
-        img: gallery1,
+        thumb: thumbNgallery,
+        preview: thumbNgallery,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "gallery2",
-        img: gallery2,
+        thumb: thumb2,
+        preview: gallery2,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "gallery3",
-        img: gallery3,
+        thumb: thumb3,
+        preview: gallery3,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "gallery4",
-        img: gallery4,
+        thumb: thumb4,
+        preview: gallery4,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "gallery5",
-        img: gallery5,
+        thumb: thumb5,
+        preview: gallery5,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "gallery6",
-        img: gallery6,
+        thumb: thumb6,
+        preview: gallery6,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "gallery7",
-        img: gallery7,
+        thumb: thumb7,
+        preview: gallery7,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "gallery8",
-        img: gallery8,
+        thumb: thumb8,
+        preview: gallery8,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
     }

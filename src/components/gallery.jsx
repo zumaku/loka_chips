@@ -35,7 +35,7 @@ const Gallery = () => {
             >
               {gallery.id === 'gallery4' ? playIcon() : ''}
               <img
-                src={gallery.img}
+                src={gallery.thumb}
                 className={`w-full ${
                   gallery.id === 'gallery4' ? '' : 'group-hover:scale-110'
                 } transition-all ease-out duration-500 overflow-hidden bg-red-200`}
@@ -49,10 +49,18 @@ const Gallery = () => {
       {/* img preview */}
       {selectedImage && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50 p-10"
           onClick={closeImage}
         >
-          <img src={gallerys.find((gallery) => gallery.id === selectedImage).img} alt="" className="max-h-full max-w-full" />
+          {selectedImage !== "gallery4" ? 
+            <img src={gallerys.find((gallery) => gallery.id === selectedImage).preview} alt="" className="max-h-full max-w-full" /> : 
+            <>
+              <video controls>
+                <source src={gallerys.find((gallery) => gallery.id === selectedImage).preview} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </>
+          }
         </div>
       )}
     </div>
