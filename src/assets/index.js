@@ -19,7 +19,6 @@ import gallery5 from "./gallery5.png";
 import gallery6 from "./gallery6.png";
 import gallery7 from "./gallery7.png";
 import gallery8 from "./gallery8.png";
-import gallery9 from "./gallery9.png";
 import play from "./play.svg";
 import location from "./location.svg";
 import email from './email.svg';
@@ -49,7 +48,6 @@ export {
     gallery6,
     gallery7,
     gallery8,
-    gallery9,
     play,
     location,
     email,

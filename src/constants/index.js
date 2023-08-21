@@ -1,4 +1,4 @@
-import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy1, enjoy2, enjoy3, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, location, email, world, instagram, whatsapp } from "../assets";
+import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy1, enjoy2, enjoy3, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, location, email, world, instagram, whatsapp } from "../assets";
 
 export const navLinks = [
     {
@@ -180,13 +180,7 @@ export const gallerys = [
         img: gallery8,
         alt: "Loka Chips Image",
         link: "https://www.instagram.com/keripikpisangslyr/"
-    },
-    {
-        id: "gallery9",
-        img: gallery9,
-        alt: "Loka Chips Image",
-        link: "https://www.instagram.com/keripikpisangslyr/"
-    },
+    }
 ];
 
 export const footer = [
