@@ -48,10 +48,7 @@ const Gallery = () => {
 
       {/* img preview */}
       {selectedImage && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50 p-10"
-          onClick={closeImage}
-        >
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50 p-10">
           {selectedImage !== "gallery4" ? 
             <img src={gallerys.find((gallery) => gallery.id === selectedImage).preview} alt="" className="max-h-full max-w-full" /> : 
             <>
@@ -61,6 +58,14 @@ const Gallery = () => {
               </video>
             </>
           }
+          <div
+            className="x w-9 h-9 absolute right-4 top-4 sm:right-7 sm:top-7 hover:cursor-pointer hover:scale-105"
+            onClick={closeImage}
+          >
+            <svg className='w-full h-full' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+              <path fill='#fff' d="M 40.783203 7.2714844 A 2.0002 2.0002 0 0 0 39.386719 7.8867188 L 25.050781 22.222656 L 10.714844 7.8867188 A 2.0002 2.0002 0 0 0 9.2792969 7.2792969 A 2.0002 2.0002 0 0 0 7.8867188 10.714844 L 22.222656 25.050781 L 7.8867188 39.386719 A 2.0002 2.0002 0 1 0 10.714844 42.214844 L 25.050781 27.878906 L 39.386719 42.214844 A 2.0002 2.0002 0 1 0 42.214844 39.386719 L 27.878906 25.050781 L 42.214844 10.714844 A 2.0002 2.0002 0 0 0 40.783203 7.2714844 z"></path>
+            </svg>
+          </div>
         </div>
       )}
     </div>
