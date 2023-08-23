@@ -1,12 +1,36 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import gsap, {ScrollTrigger, Power4} from 'gsap/all'
 import useScrollBlock from '../custonhooks/useScrollBlock'
 
 import style from '../styles'
 import { gallerys } from '../constants'
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Gallery = () => {
+  
   const [selectedImage, setSelectedImage] = useState(null)
   const [blockScroll, allowScroll] = useScrollBlock()
+
+  const trigRef = useRef(null)
+
+  
+  useEffect(() => {
+    const tl = gsap.timeline({
+      duration: .3,
+      ease: Power4.easeOut,
+      scrollTrigger:{
+        trigger: trigRef.current,
+        start: "10px 50%"
+      }
+    })
+
+    gallerys.map((gallery) => {
+      tl.to(".coverFront" + gallery.id, {x: 0}, "-=.3")
+    })
+    tl.to(".coverBack", {opacity: 0})
+    tl.to(".coverFrontAll", {x: "100%"}, "-=.3")
+  }, [])
 
   const openImage = (galleryId) => {
     setSelectedImage(galleryId)
@@ -20,27 +44,32 @@ const Gallery = () => {
 
   return (
     <div className={`${style.paddingX} w-full py-20`} id='galeri'>
-      <div className="max-w-[1300px] mx-auto text-center">
+      <div 
+        ref={trigRef}
+        className="max-w-[1300px] mx-auto text-center"
+      >
         <h1 className={`${style.heading2} mb-20`}>Galeri</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:grid-rows-4">
           {gallerys.map((gallery) => (
             <div
               key={gallery.id}
-              className={`
-                ${gallery.id === 'gallery1' ? 'col-span-2 sm:col-span-2 sm:row-span-2' : ''} 
-                ${gallery.id === 'gallery4' ? 'col-span-2 relative' : ''}
-                group hover:cursor-pointer overflow-hidden
-              `}
               onClick={() => openImage(gallery.id)}
+              className={`${
+                  gallery.id === 'gallery1' ? 'col-span-2 sm:col-span-2 sm:row-span-2' : ''
+                } ${
+                  gallery.id === 'gallery4' ? 'col-span-2 relative' : ''
+                } group hover:cursor-pointer overflow-hidden relative`}
             >
               {gallery.id === 'gallery4' ? playIcon() : ''}
               <img
                 src={gallery.thumb}
+                alt={gallery.alt}
                 className={`w-full ${
                   gallery.id === 'gallery4' ? '' : 'group-hover:scale-110'
-                } transition-all ease-out duration-500 overflow-hidden bg-red-200`}
-                alt={gallery.alt}
+                } transition-all ease-out duration-500 overflow-hidden`}
               />
+              <div className="coverBack absolute w-full h-full top-0 left-0 bg-gray-200"></div>
+              <div className={`${"coverFront" + gallery.id} coverFrontAll absolute w-full h-full top-0 left-0 -translate-x-full bg-primary`}></div>
             </div>
           ))}
         </div>
