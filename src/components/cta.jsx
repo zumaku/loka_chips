@@ -14,7 +14,7 @@ const CTA = () => {
         y:-5,
         scrollTrigger:{
             trigger:"#titleCTA .char",
-            start:"top 80%"
+            start:"top 90%"
         }
     })
   }, [])

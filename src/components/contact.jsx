@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import gsap, {Power4, Back} from "gsap/all";
+import gsap, {Power4} from "gsap/all";
 
 import style from "../styles"
 
@@ -35,7 +35,7 @@ const Contact = () => {
     const tl = gsap.timeline({
       defaults:{
         ease: Power4.easeIn,
-        duration: .3
+        duration: .4
       },
       scrollTrigger: {
         trigger: desc.current,
@@ -44,16 +44,16 @@ const Contact = () => {
     })
     tl.to(form.current.querySelector("#nama"), {opacity: 1, y: 0})
       .to(form.current.querySelector("#nama"), {width: "100%"})
-      .to(form.current.querySelector("#email"), {opacity: 1, y: 0}, "-=.1")
+      .to(form.current.querySelector("#email"), {opacity: 1, y: 0}, "-=.2")
       .to(form.current.querySelector("#email"), {width: "100%"})
-      .to(form.current.querySelector("#pesan"), {opacity: 1, y: 0}, "-=.3")
+      .to(form.current.querySelector("#pesan"), {opacity: 1, y: 0}, "-=.4")
       .to(form.current.querySelector("#pesan"), {width: "100%"})
       .to(".label", {duration: .8, ease: Power4.easeOut, opacity: 1, x: 0})
 
   }, [])
 
   return (
-    <div className={`${style.paddingX} py-20 text-center`}>
+    <div className={`${style.paddingX} sm:py-20 text-center`} id="kontak">
       <h1 className={`${style.heading1} mb-10`}>Kontak Kami</h1>
       <p
         ref={desc}

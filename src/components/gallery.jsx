@@ -29,7 +29,7 @@ const Gallery = () => {
       tl.to(".coverFront" + gallery.id, {x: 0}, "-=.3")
     })
     tl.to(".coverBack", {opacity: 0})
-    tl.to(".coverFrontAll", {x: "100%"}, "-=.3")
+    tl.to(".coverFrontAll", {x: "100%"}, "-=.4")
   }, [])
 
   const openImage = (galleryId) => {

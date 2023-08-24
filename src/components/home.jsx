@@ -36,7 +36,7 @@ const Home = () => {
 
   return (
     <div className={`${style.paddingX} w-full h-fit sl:h-screen bg-primary text-txtcolor`}>
-      <div className="w-full max-w-[1300px] m-auto py-16 h-full flex flex-col-reverse sl:flex-row-reverse justify-start sl:justify-between items-center relative" id="home">
+      <div className="w-full max-w-[1300px] m-auto py-20 h-full flex flex-col-reverse sl:flex-row-reverse justify-start sl:justify-between items-center relative" id="home">
         <img src={heroimg} alt="2 Loka Chips Products" className="imgHero w-full xs:max-w-[490px] sm:translate-x-10"/>
         <div className="heroContent flex flex-col mb-10 md:pt-10">
           <h3 className={`homeHeading ${style.heading2} invertSelection`}>Jelajahi Rasanya!</h3>
