@@ -1,4 +1,4 @@
-import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy1, enjoy2, enjoy3, thumbNgallery, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7, thumb8, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, location, email, world, instagram, whatsapp } from "../assets";
+import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy1, enjoy2, enjoy3, character1, character2, character3, character4, character5, thumbNgallery, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7, thumb8, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, location, email, world, instagram, whatsapp } from "../assets";
 
 export const navLinks = [
     {
@@ -97,36 +97,41 @@ export const enjoy = [
 export const testimonials = [
     {
         id: "testi1",
-        by: "Indra S.",
+        by: "Indra Syarifuddin",
         an: "Mahasiswa Teknik Informatika",
+        img: character1,
         content:
             "Loka Chips adalah teman setia saat sesi belajarku. Rasanya yang autentik dan renyah membantu menghilangkan kejenuhan. Dengan Loka Chips, aku merasa lebih termotivasi untuk menyelesaikan tugas-tugas kuliahku."
     },
     {
         id: "testi2",
-        by: "Prof. Anita W.",
+        by: "Prof. Anita Wardani",
         an: "Dosen Matematika",
+        img: character2,
         content:
             "bagai dosen, saya mengapresiasi Loka Chips sebagai pilihan cemilan sehat dan lezat bagi mahasiswa. Saya sering melihat mahasiswa membawa Loka Chips saat kelas atau konsultasi, memberikan energi yang dibutuhkan."
     },
     {
         id: "testi3",
-        by: "Dara M.",
+        by: "Dara Mahdayati",
         an: "Mahasiswa Desain Grafis",
+        img: character3,
         content:
             "Bersantai dengan teman-teman jadi lebih seru dengan Loka Chips. Rasanya yang unik dan praktisnya membuat kami jadi ketagihan. Bukan hanya cemilan biasa, tapi juga teman akrab di setiap momen berbagi."
     },
     {
         id: "testi4",
-        by: "Adi K.",
+        by: "Adi Kusumang",
         an: "Konsultan Keuangan",
+        img: character4,
         content:
             "Loka Chips adalah pilihan sempurna untuk membantu saya tetap produktif di tengah jadwal yang padat. Rasanya yang autentik dan teksturnya yang renyah memberikan kepuasan luar biasa saat bekerja."
     },
     {
         id: "testi5",
-        by: "Rina P",
+        by: "Rina Putri D.",
         an: "Pecinta Pedas",
+        img: character5,
         content:
             "Saya seorang pecinta pedas sejati, dan Loka Chips Rasa Balado adalah jawaban atas keinginan saya. Pedasnya pas dan nikmat, dengan sentuhan pisang Selayar yang unik. Sungguh pilihan cemilan yang tepat!"
     },
