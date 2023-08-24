@@ -81,7 +81,7 @@ const Gallery = () => {
           {selectedImage !== "gallery4" ? 
             <img src={gallerys.find((gallery) => gallery.id === selectedImage).preview} alt="" className="max-h-full max-w-full" /> : 
             <>
-              <video controls>
+              <video controls controlsList='nodownload'>
                 <source src={gallerys.find((gallery) => gallery.id === selectedImage).preview} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
