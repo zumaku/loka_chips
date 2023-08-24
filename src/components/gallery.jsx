@@ -49,7 +49,7 @@ const Gallery = () => {
         className="max-w-[1300px] mx-auto text-center"
       >
         <h1 className={`${style.heading2} mb-20`}>Galeri</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:grid-rows-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:grid-rows-3">
           {gallerys.map((gallery) => (
             <div
               key={gallery.id}
