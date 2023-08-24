@@ -21,6 +21,8 @@ const style = {
     marginY: "sm:my-16 my-6",
 
     arrow: "w-16 opacity-75 group-hover:w-[91px] group-hover:opacity-100 transition-all",
+
+    input: "w-full mb-10 py-3 sm:py-5 px-5 sm:px-7 border-4 border-secondary rounded-xl focus:outline-none drop-shadow-[3px_3px_0_#341D12] focus:drop-shadow-[6px_6px_0_#341D12] transition-all",
 };
 
 export default style;
