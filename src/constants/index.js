@@ -109,7 +109,7 @@ export const testimonials = [
         an: "Dosen Matematika",
         img: character2,
         content:
-            "bagai dosen, saya mengapresiasi Loka Chips sebagai pilihan cemilan sehat dan lezat bagi mahasiswa. Saya sering melihat mahasiswa membawa Loka Chips saat kelas atau konsultasi, memberikan energi yang dibutuhkan."
+            "Sebagai dosen, saya mengapresiasi Loka Chips sebagai pilihan cemilan sehat dan lezat bagi mahasiswa. Saya sering melihat mahasiswa membawa Loka Chips saat kelas atau konsultasi, memberikan energi yang dibutuhkan."
     },
     {
         id: "testi3",
