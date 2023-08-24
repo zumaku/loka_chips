@@ -76,12 +76,12 @@ const DetailProduct = (props) => {
                         className="flex opacity-0"
                     >
                         <button
-                            className={`${style.btnChocolate} hover:cursor-pointer mr-3`}
+                            className={`${style.btnYellow}  mr-3`}
+                        >Order Sekarang</button>
+                        <button
+                            className={`${style.btnChocolate}`}
                             onClick={() => props.setIsDetailActive(false)}
                         >Kembali</button>
-                        <button
-                            className={`${style.btnTransparant}`}
-                        >Order Ini</button>
                     </div>
                 </div>
                 <img ref={img} className="w-1/2 sm:w-1/3 lg:w-72 m-auto drop-shadow-lg scale-[.3] opacity-0" src={props.product.detail.img} alt="" />
