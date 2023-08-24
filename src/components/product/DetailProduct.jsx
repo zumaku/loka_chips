@@ -69,7 +69,7 @@ const DetailProduct = (props) => {
                     >{props.product.detail.desc1}</p>
                     <p
                         ref={paragraph2}
-                        className={`${style.paragraph} mb-6 lg:mb-10 translate-y-10 opacity-0`}
+                        className={`${style.paragraph} mb-8 lg:mb-10 translate-y-10 opacity-0`}
                     >{props.product.detail.desc2}</p>
                     <div
                         ref={btn}
