@@ -39,9 +39,9 @@ const Home = () => {
       <div className="w-full max-w-[1300px] m-auto py-16 h-full flex flex-col-reverse sl:flex-row-reverse justify-start sl:justify-between items-center relative" id="home">
         <img src={heroimg} alt="2 Loka Chips Products" className="imgHero w-full xs:max-w-[490px] sm:translate-x-10"/>
         <div className="heroContent flex flex-col mb-10 md:pt-10">
-          <h3 className={`homeHeading ${style.heading2}`}>Jelajahi Rasanya!</h3>
-          <h1 className={`homeHeading ${style.heading1} mb-[17px] max-w-[700px]`}><span className="text-white">Loka Chips</span>, Cemilan Wajib Mahasiswa</h1>
-          <p className={`homeParagraph ${style.paragraph} mb-10 md:mb-14 max-w-[541px]`}>Kembangkan cita rasa dan semangatmu dengan setiap gigitan Loka Chips. Kami hadir untuk mengiringi perjalanan inspirasimu, menjadi pilihan cemil wajib bagi mahasiswa yang berani mengeksplorasi rasa.</p>
+          <h3 className={`homeHeading ${style.heading2} invertSelection`}>Jelajahi Rasanya!</h3>
+          <h1 className={`homeHeading ${style.heading1} mb-[17px] max-w-[700px] invertSelection`}><span className="text-white invertSelection">Loka Chips</span>, Cemilan Wajib Mahasiswa</h1>
+          <p className={`homeParagraph ${style.paragraph} mb-10 md:mb-14 max-w-[541px] invertSelection`}>Kembangkan cita rasa dan semangatmu dengan setiap gigitan Loka Chips. Kami hadir untuk mengiringi perjalanan inspirasimu, menjadi pilihan cemil wajib bagi mahasiswa yang berani mengeksplorasi rasa.</p>
           <div className="buttons">
             <button className={`button1 ${style.btnWhite} mr-3 sm:mr-5`}>Order Sekarang</button>
             <a href="#kontak" className={`button2 ${style.btnChocolate} inline-block`}>Kontak Kami</a>

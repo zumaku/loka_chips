@@ -9,6 +9,16 @@
   src: url("assets/GillSansUltraBold.ttf") format("truetype");
 }
 
+::selection {
+  background-color: #F0C91A;
+  color: #1E1E1E;
+}
+
+.invertSelection::selection {
+  background-color: white;
+  color: #1E1E1E;
+}
+
 html {
   scroll-behavior: smooth;
 }

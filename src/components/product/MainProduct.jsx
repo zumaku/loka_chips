@@ -112,7 +112,7 @@ const MainProduct = (props) => {
         <div className={`max-w-[1300px] m-auto py-10`} id="produk">
 
             <div className="secTitle text-center mb-5">
-                <h3 className={`${style.heading2}`}>Varian Produk</h3>
+                <h3 className={`${style.heading2} invertSelection`}>Varian Produk</h3>
                 <h1 id="titleProduct" className={`${style.headingS} text-5xl sm:text-[64px] bg-clip-border overflow-hidden`}>{props.product.title}</h1>
             </div>
 
@@ -122,7 +122,7 @@ const MainProduct = (props) => {
                 <div className="left sm:pt-20 text-center sm:text-start z-[2]">
                     <div className="tagline mb-8 sm:max-w-sm overflow-hidden relative">
                     <div ref={taglineRef1} className="w-0 h-full bg-yellow-300 absolute"></div>
-                    <p ref={taglineRef2} className="opacity-0">{props.product.tagline}</p>
+                    <p ref={taglineRef2} className="opacity-0 invertSelection">{props.product.tagline}</p>
                     </div>
                     <button
                         className={`${style.btnChocolate} mb-10 sm:mb-0`}
