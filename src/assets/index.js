@@ -10,7 +10,6 @@ import enjoy1 from "./studying.svg";
 import enjoy2 from './discussion.svg';
 import enjoy3 from './Working.svg';
 import uinimg from "./uin_img.png";
-import white_location from "./white_location.svg"
 import character1 from "./character1.png"
 import character2 from "./character2.png"
 import character3 from "./character3.png"
@@ -31,12 +30,6 @@ import gallery5 from "./gallery5.png";
 import gallery6 from "./gallery6.png";
 import gallery7 from "./gallery7.png";
 import gallery8 from "./gallery8.png";
-import play from "./play.svg";
-import location from "./location.svg";
-import email from './email.svg';
-import world from "./world.svg";
-import instagram from './instagram.svg';
-import whatsapp from './whatsapp.svg';
 
 export {
     logo,
@@ -51,7 +44,6 @@ export {
     enjoy2,
     enjoy3,
     uinimg,
-    white_location,
     character1,
     character2,
     character3,
@@ -72,10 +64,4 @@ export {
     gallery6,
     gallery7,
     gallery8,
-    play,
-    location,
-    email,
-    world,
-    instagram,
-    whatsapp
 }

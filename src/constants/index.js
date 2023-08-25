@@ -1,4 +1,10 @@
-import { original1, original2, chocholate1, chocholate2, balado1, balado2, enjoy1, enjoy2, enjoy3, character1, character2, character3, character4, character5, thumbNgallery, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7, thumb8, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, location, email, world, instagram, whatsapp } from "../assets";
+import {
+    original1, original2, chocholate1, chocholate2, balado1, balado2,
+    enjoy1, enjoy2, enjoy3,
+    character1, character2, character3, character4, character5,
+    thumbNgallery, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7, thumb8,
+    gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8
+} from "../assets";
 
 export const navLinks = [
     {
@@ -199,31 +205,26 @@ export const gallerys = [
 export const footer = [
     {
         id: "location",
-        icon: location,
         content: "Samata, Gowa. Indonesia.",
         link: "https://www.google.com/maps/place/Samata,+Somba+Opu,+Gowa+Regency,+South+Sulawesi/@-5.1962145,119.5008564,14z/data=!3m1!4b1!4m6!3m5!1s0x2dbee3f25e9a8bb9:0x139ad8e6521423fe!8m2!3d-5.1958966!4d119.5020698!16s%2Fg%2F1hc0hkl6r?entry=ttu"
     },
     {
         id: "email",
-        icon: email,
         content: "lokachips@gmail.com",
         link: "#"
     },
     {
         id: "website",
-        icon: world,
         content: "lokachips.netlify.com",
         link: "#"
     },
     {
         id: "instagram",
-        icon: instagram,
         content: "lokachips.netlify.com",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
         id: "whatsapp",
-        icon: whatsapp,
         content: "+62 822-1677-4837",
         link: "#"
     },
