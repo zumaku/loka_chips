@@ -66,14 +66,14 @@ const Contact = () => {
         autoComplete="off"
       >
         <label className={`${style.heading3} w-full text-start mb-2 label -translate-x-20 opacity-0`} htmlFor="name">Nama</label>
-        <input className={`${style.input} -translate-y-28 opacity-0 w-28`} type="text" id="nama" required />
+        <input className={`${style.input} -translate-y-28 opacity-0 w-2`} type="text" id="nama" required />
         
         <label className={`${style.heading3} w-full text-start mb-2 label -translate-x-20 opacity-0`} htmlFor="email">Email</label>
-        <input className={`${style.input} -translate-y-28 opacity-0 w-28`} type="email" id="email" required />
+        <input className={`${style.input} -translate-y-28 opacity-0 w-2`} type="email" id="email" required />
 
         <label className={`${style.heading3} w-full text-start mb-2 label -translate-x-20 opacity-0`} htmlFor="pesan">Pesan</label>
         <textarea
-          className={`${style.input} resize-none w-28 overflow-hidden -translate-y-28 opacity-0`}
+          className={`${style.input} resize-none w-2 overflow-hidden -translate-y-28 opacity-0`}
           id="pesan"
           value={text}
           onChange={(e) => setText(e.target.value)}

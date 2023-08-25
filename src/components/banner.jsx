@@ -26,14 +26,14 @@ const Banner = () => {
 
   return (
     <div ref={bgRef} className={`${style.paddingX} h-[400px] overflow-hidden w-full bg-no-repeat bg-cover bg-top relative `} style={{ backgroundImage: `url(${uinimg})` }}>
-      <div className="max-w-[1300px] h-full text-white m-auto flex flex-col justify-center items-center">
+      <div className="max-w-[1300px] h-full text-white m-auto flex flex-col justify-center items-start">
         <h2 className={`${style.heading2} mb-4`}>Gratis Ongkir</h2>
-        <p className={`${style.paragraph} mb-10 sm:w-2/3 text-center`}>
-          Nikmati Loka Chips dalam berbagai keadaan. Pengiriman
-          <span className="font-bold"> gratis </span>
-          untuk daerah
-          <span className="font-bold"> Samata </span>
-          dan sekitarnya. Dapatkan Loka Chips di kantin-kantin kampus UIN Alauddin Makassar.
+        <p className={`${style.paragraph} mb-10 max-w-[557px]`}>
+          Nikmati Loka Chips dalam berbagai keadaan. Pengiriman <strong>
+            gratis
+          </strong> untuk daerah <strong>
+            Samata
+          </strong> dan sekitarnya. Dapatkan Loka Chips di kantin-kantin kampus UIN Alauddin Makassar.
         </p>
         <div className="flex font-bold justify-center items-center w-fit">
           <svg className="mr-5" width="21" height="30" viewBox="0 0 21 30" fill="none" xmlns="http://www.w3.org/2000/svg">
