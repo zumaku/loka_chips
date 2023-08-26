@@ -202,7 +202,7 @@ export const gallerys = [
     }
 ];
 
-export const footer = [
+export const footers = [
     {
         id: "location",
         content: "Samata, Gowa. Indonesia.",
@@ -211,7 +211,7 @@ export const footer = [
     {
         id: "email",
         content: "lokachips@gmail.com",
-        link: "#"
+        link: "#",
     },
     {
         id: "website",

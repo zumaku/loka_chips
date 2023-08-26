@@ -53,7 +53,7 @@ const Contact = () => {
   }, [])
 
   return (
-    <div className={`${style.paddingX} sm:py-20 text-center`} id="kontak">
+    <div className={`${style.paddingX} py-20 text-center`} id="kontak">
       <h1 className={`${style.heading1} mb-10`}>Kontak Kami</h1>
       <p
         ref={desc}
