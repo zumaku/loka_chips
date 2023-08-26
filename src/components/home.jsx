@@ -16,13 +16,12 @@ const Home = () => {
   useEffect(() => {
     scrollTl.to(".circle", {y:35})
     
-    const homeTl = gsap.timeline({defaults:{duration: .5,ease:Power4.easeOut}})
+    const homeTl = gsap.timeline({defaults:{duration: .8,ease:Power4.easeOut}})
     const heroImgTl = gsap.timeline({defaults:{duration:1.5, delay:.2}})
     homeTl.fromTo(".imgHero", {scale:.5, opacity:0}, {scale:1, opacity:1})
           .fromTo(".homeHeading", {x:-10, opacity:0}, {x:0, opacity:1})
-          .fromTo(".homeParagraph", {x:-10, opacity:0}, {x:0, opacity:1}, "-=.2")
-          .fromTo(".button1", {y:30, opacity:0, ease:Back.easeOut}, {y:0, opacity:1}, "-=.3")
-          .fromTo(".button2", {y:30, opacity:0, ease:Back.easeIn}, {y:0, opacity:1}, "-=.6")
+          .fromTo(".homeParagraph", {x:-10, opacity:0}, {x:0, opacity:1}, "-=.5")
+          .fromTo(".buttons", {y:30, opacity:0, ease:Back.easeOut}, {y:0, opacity:1}, "-=.3")
     heroImgTl.fromTo(".imgHero", {scale:1, y:0, duration:10, delay:5}, {scale:"1.02", y:-5, repeat:-1, yoyo:true})
     
     // Event Listener untuk ukuran window
@@ -43,8 +42,8 @@ const Home = () => {
           <h1 className={`homeHeading ${style.heading1} mb-[17px] max-w-[700px] invertSelection`}><span className="text-white invertSelection">Loka Chips</span>, Cemilan Wajib Mahasiswa</h1>
           <p className={`homeParagraph ${style.paragraph} mb-10 md:mb-14 max-w-[541px] invertSelection`}>Kembangkan cita rasa dan semangatmu dengan setiap gigitan Loka Chips. Kami hadir untuk mengiringi perjalanan inspirasimu, menjadi pilihan cemil wajib bagi mahasiswa yang berani mengeksplorasi rasa.</p>
           <div className="buttons">
-            <button className={`button1 ${style.btnWhite} mr-3 sm:mr-5`}>Order Sekarang</button>
-            <a href="#kontak" className={`button2 ${style.btnChocolate} inline-block`}>Kontak Kami</a>
+            <button className={`${style.btnWhite} mr-3 sm:mr-5`}>Order Sekarang</button>
+            <a href="#kontak" className={`${style.btnChocolate} inline-block`}>Kontak Kami</a>
           </div>
         </div>
         <a href="#produk" className="scrollAnim w-[29px] h-[67px] rounded-[19px] border-2 border-secondary absolute bottom-5 inset-x-1/2 py-1 flex justify-center opacity-0 sl:opacity-100">

@@ -202,7 +202,7 @@ export const gallerys = [
     }
 ];
 
-export const footers = [
+export const infos = [
     {
         id: "location",
         content: "Samata, Gowa. Indonesia.",

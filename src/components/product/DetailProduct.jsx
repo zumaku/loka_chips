@@ -34,7 +34,7 @@ const DetailProduct = (props) => {
             // gsap.to(container.current, {opacity: 1, duration: 1, ease: Power4.easeOut})
             blockScroll()
         } else{
-            detailTl.to(container.current, {opacity: 0, y: "100%"})
+            detailTl.to(container.current, {y: "100%"})
             // gsap.to(container.current, {opacity: 0, duration: 1, ease: Power4.easeOut})
             allowScroll()
         }

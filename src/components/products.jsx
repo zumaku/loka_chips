@@ -22,7 +22,7 @@ const Product = () => {
       ease:Back.easeOut,
       scrollTrigger:{
         trigger:halfCrRef.current,
-        start:"-80% 80%",
+        start:"-80% 100%",
       }
     })
     gsap.to(halfCrRef.current, {
