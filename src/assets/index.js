@@ -2,8 +2,8 @@ import logo from "./horizontal_loka_chips.png";
 import heroimg from "./hero_img.png";
 import original1 from "./original_tilt.png";
 import original2 from "./original_stand.png";
-import chocholate1 from "./chocolate_tilt.png";
-import chocholate2 from "./chocolate_stand.png";
+import Chocolate1 from "./chocolate_tilt.png";
+import Chocolate2 from "./chocolate_stand.png";
 import balado1 from "./balado_tilt.png";
 import balado2 from "./balado_stand.png";
 import enjoy1 from "./studying.svg";
@@ -36,8 +36,8 @@ export {
     heroimg,
     original1,
     original2,
-    chocholate1,
-    chocholate2,
+    Chocolate1,
+    Chocolate2,
     balado1,
     balado2,
     enjoy1,

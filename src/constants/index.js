@@ -1,5 +1,5 @@
 import {
-    original1, original2, chocholate1, chocholate2, balado1, balado2,
+    original1, original2, Chocolate1, Chocolate2, balado1, balado2,
     enjoy1, enjoy2, enjoy3,
     character1, character2, character3, character4, character5,
     thumbNgallery, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7, thumb8,
@@ -49,16 +49,16 @@ export const produks = [
             }
     },
     {
-        id: "chocholate",
+        id: "Chocolate",
         title: "Chocolate",
         tagline: "Manisnya Kelezatan dengan Sentuhan Coklat",
-        img: chocholate1,
+        img: Chocolate1,
         detail: {
                 desc1:
                     "Loka Chips Rasa Coklat mengajakmu untuk merasakan kelezatan manis yang memikat, menggabungkan kerupuk renyah dengan sentuhan coklat yang menggoda. Setiap gigitan adalah perpaduan sempurna antara kekenyalan pisang Selayar dan sensasi coklat lezat yang melumer di mulutmu.",
                 desc2:
                     "Rasakan petualangan rasa dengan Loka Chips Rasa Coklat, di mana coklat cair memeluk setiap kerupuk, menciptakan harmoni manis yang luar biasa bersama kelembutan pisang. Cocok untuk dinikmati sendiri atau dibagikan, Loka Chips Rasa Coklat membawa manisnya kelezatan dalam setiap momen. Biarkan dirimu terhanyut dalam kelezatan manis dan renyah yang tak tertandingi, dengan setiap gigitan membawamu pada perjalanan rasa yang memikat dan menggugah selera.",
-                img: chocholate2
+                img: Chocolate2
             }
     },
     {
@@ -220,7 +220,7 @@ export const infos = [
     },
     {
         id: "instagram",
-        content: "lokachips.netlify.com",
+        content: "@keripikpisangskyr",
         link: "https://www.instagram.com/keripikpisangslyr/"
     },
     {
@@ -252,7 +252,7 @@ const questions = [
 export const getWaApi = (param = false) => {
     let question = '';
     
-    if (param === "original" || param === "chocolate" || param === "balado"){
+    if (param === "original" || param === "Chocolate" || param === "balado"){
         question = (questions[1][Math.floor(Math.random() * questions.length)] + param).replace(/ /g, '%20');
     } else if (param === false){
         question = questions[0][Math.floor(Math.random() * questions.length)].replace(/ /g, '%20');
