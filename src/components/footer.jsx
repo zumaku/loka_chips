@@ -1,7 +1,9 @@
 import { useState } from "react"
+
 import style from "../styles"
 import { logo } from "../assets"
 import { infos } from "../constants"
+import { getWaApi } from "../constants"
 
 const Footer = () => {
 
@@ -22,6 +24,7 @@ const Footer = () => {
                   >
                     <a
                       href={info.link}
+                      target="blank"
                       className="flex items-center"
                     >
                       {setIcon(info.id)}
@@ -35,7 +38,8 @@ const Footer = () => {
           <div className="flex flex-col mb-12 ss:mb-0">
             <p className="mb-4 ">Hubungi Kimi di Whatsapp</p>
             <a
-              href={infos[infos.length - 1].link}
+              href={getWaApi(true)}
+              target="blank"
               className="flex items-center mb-4"
             >
               <div className="w-8">
@@ -43,7 +47,11 @@ const Footer = () => {
               </div>
               <p className="ml-2">{infos[infos.length - 1].content}</p>
             </a>
-            <button className={style.btnYellow}>Hubungi Sekarang</button>
+            <a
+              href={getWaApi(true)}
+              target="blank"
+              className={style.btnYellow}
+            >Hubungi Sekarang</a>
           </div>
         </div>
         {/* <div className="w-56"> */}

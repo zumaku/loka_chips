@@ -54,7 +54,7 @@ const Contact = () => {
 
   return (
     <div className={`${style.paddingX} py-20 text-center`} id="kontak">
-      <h1 className={`${style.heading1} mb-10`}>Kontak Kami</h1>
+      <h1 className={`${style.heading1} mb-10`}>Kontak</h1>
       <p
         ref={desc}
         className={`${style.paragraph} max-w-3xl mx-auto mb-20 translate-y-52 opacity-0`}

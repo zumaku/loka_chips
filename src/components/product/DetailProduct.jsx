@@ -3,6 +3,7 @@ import gsap, {Back, Power4} from "gsap"
 import useScrollBlock from "../../custonhooks/useScrollBlock"
 
 import style from "../../styles"
+import { getWaApi } from "../../constants"
 
 const DetailProduct = (props) => {
 
@@ -75,9 +76,11 @@ const DetailProduct = (props) => {
                         ref={btn}
                         className="flex opacity-0"
                     >
-                        <button
+                        <a
+                            href={getWaApi(props.product.id)}
+                            target="blank"
                             className={`${style.btnYellow}  mr-3`}
-                        >Order Sekarang</button>
+                        >Order Sekarang</a>
                         <button
                             className={`${style.btnChocolate}`}
                             onClick={() => props.setIsDetailActive(false)}
