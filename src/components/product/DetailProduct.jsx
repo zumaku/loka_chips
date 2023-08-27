@@ -42,7 +42,7 @@ const DetailProduct = (props) => {
     }, [props.isDetailActive])
 
     const setTitleColor = () => {
-        if (props.product.id === "chocholate") return "text-chocholate"
+        if (props.product.id === "Chocolate") return "text-chocolate"
         else if (props.product.id === "balado") return "text-balado"
         else return "text-primary"
     }

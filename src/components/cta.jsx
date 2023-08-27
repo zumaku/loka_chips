@@ -28,7 +28,7 @@ const CTA = () => {
         href={getWaApi()}
         target="blank"
         className={`${style.btnChocolate}`}
-      >Hubungi Kami</a>
+      >Klik Disini</a>
     </div>
   );
 }

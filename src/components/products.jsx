@@ -29,7 +29,7 @@ const Product = () => {
       scale:1.2,
       scrollTrigger: {
         trigger: halfCrRef.current,
-        start: "-50% 80%",
+        start: "-50% 100%",
         scrub: true,
       },
     })

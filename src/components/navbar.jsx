@@ -18,7 +18,7 @@ const Navbar = () => {
   useEffect(()=>{
     const showNav = gsap.to('.navContainer', {
       y:-100,
-      duration:.7,
+      duration:.5,
       ease:Power4.easeInOut
     })
 

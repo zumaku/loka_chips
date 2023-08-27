@@ -43,7 +43,7 @@ const Home = () => {
           <h1 className={`homeHeading ${style.heading1} mb-[17px] max-w-[700px] invertSelection`}><span className="text-white invertSelection">Loka Chips</span>, Cemilan Wajib Mahasiswa</h1>
           <p className={`homeParagraph ${style.paragraph} mb-10 md:mb-14 max-w-[541px] invertSelection`}>Kembangkan cita rasa dan semangatmu dengan setiap gigitan Loka Chips. Kami hadir untuk mengiringi perjalanan inspirasimu, menjadi pilihan cemil wajib bagi mahasiswa yang berani mengeksplorasi rasa.</p>
           <div className="buttons">
-            <a href={getWaApi()} target="blank" className={`${style.btnWhite} mr-3 sm:mr-5`}>Order Sekarang</a>
+            <a href={getWaApi()} target="blank" className={`${style.btnWhite} inline-block mr-3 sm:mr-5`}>Order Sekarang</a>
             <a href="#kontak" className={`${style.btnChocolate} inline-block`}>Kontak Kami</a>
           </div>
         </div>

@@ -2,7 +2,7 @@ const style = {
     // Buttons
     btnYellow: "font-bold w-fit text-base sl:text-[18px] px-3 sl:px-8 py-3 sl:py-[18px] rounded-md bg-primary hover:drop-shadow-[0_4px_20px_rgba(240,201,26,.5)] hover:-translate-y-1 transition duration-150 ease-in",
     btnChocolate: "font-bold w-fit text-base sl:text-[18px] px-3 sl:px-8 py-3 sl:py-[18px] rounded-md bg-secondary text-white hover:-translate-y-1 transition duration-150 ease-in",
-    btnWhite: "font-bold w-fit text-base sl:text-[18px] px-3 sl:px-8 py-3 sl:py-[18px] rounded-md bg-white text-secondary hover:-translate-y-1 transition duration-150 ease-in",
+    btnWhite: "font-bold w-fit text-base sl:text-[18px] px-3 sl:px-8 py-3 sl:py-[18px] rounded-md bg-white text-txtcolor hover:-translate-y-1 transition duration-150 ease-in",
     btnTransparant: "font-bold w-fit text-base sl:text-[18px] px-3 sl:px-8 py-3 sl:py-[18px] rounded-md hover:bg-primary border-collapse text-secondary hover:-translate-y-1 transition duration-150 ease-in border-[3px] border-secondary",
     btnSending: "font-bold w-fit text-base sl:text-[18px] px-3 sl:px-8 py-3 sl:py-[18px] rounded-md bg-primary drop-shadow-[0_4px_20px_rgba(240,201,26,.5)] hover:cursor-not-allowed",
 
