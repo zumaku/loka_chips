@@ -56,7 +56,9 @@ const Footer = () => {
         </div>
         {/* <div className="w-56"> */}
         <div className="w-fit ss:w-44 sm:w-fit flex flex-col justify-between">
-          <img className="w-44  sm:w-52 " src={logo} alt="" />
+          <a href="/">
+            <img className="w-44  sm:w-52 " src={logo} alt="" />
+          </a>
           <p className={style.paragraph}>&copy; {currentYear} Loka Chips. All rights reserved.</p>
         </div>
       </div>

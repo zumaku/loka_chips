@@ -22,8 +22,8 @@ const CTA = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center bg-primary py-16 my-20">
-      <h1 id="titleCTA" className={`${style.headingS} text-4xl text-center mb-5 bg-clip-border overflow-hidden`}>TUNGGU APA LAGI?</h1>
-      <p className={`${style.paragraph} max-w-sm sm:max-w-2xl text-center mb-12`}>Jangan Tunda Nikmatnya, Pesan Loka Chips Sekarang dan Rasakan Kelezatan Luar Biasa!</p>
+      <h1 id="titleCTA" className={`${style.headingS} text-4xl text-center mb-5 bg-clip-border overflow-hidden invertSelection`}>TUNGGU APA LAGI?</h1>
+      <p className={`${style.paragraph} max-w-sm sm:max-w-2xl text-center mb-12 invertSelection`}>Jangan Tunda Nikmatnya, Pesan Loka Chips Sekarang dan Rasakan Kelezatan Luar Biasa!</p>
       <a
         href={getWaApi()}
         target="blank"

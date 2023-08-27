@@ -1,4 +1,4 @@
-import logo from "./horizontal_loka_chips.png";
+import logo from "./loka_chips_logo.gif";
 import heroimg from "./hero_img.png";
 import original1 from "./original_tilt.png";
 import original2 from "./original_stand.png";
