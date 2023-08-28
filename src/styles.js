@@ -11,6 +11,7 @@ const style = {
     heading3: "text-lg font-bold",
     headingS: "font-gsub text-primary drop-shadow-[3px_3px_0_#341D12] text-stroke-4",
     paragraph: "font-poppins text-sm sm:text-base sl:text-lg font-normal",
+    navbar: "text-primary font-bold drop-shadow-[1.5px_1px_0_#341D12] text-stroke-1 sm:text-stroke-half",
 
     flexCenter: "flex justify-center items-center",
     flexStart: "flex justify-center items-start",
