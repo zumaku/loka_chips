@@ -30,6 +30,7 @@ import gallery5 from "./gallery5.png";
 import gallery6 from "./gallery6.png";
 import gallery7 from "./gallery7.png";
 import gallery8 from "./gallery8.png";
+import not_found from "./not_found.svg"
 
 export {
     logo,
@@ -64,4 +65,5 @@ export {
     gallery6,
     gallery7,
     gallery8,
+    not_found
 }

@@ -8,6 +8,7 @@ import Gallery from "./Gallery"
 import CTA from "./CTA"
 import Contact from "./Contact"
 import Footer from "./Footer"
+import NotFound from "./not_found"
 
 export {
     Navbar,
@@ -19,5 +20,6 @@ export {
     Gallery,
     CTA,
     Contact,
-    Footer
+    Footer,
+    NotFound
 }
