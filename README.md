@@ -16,4 +16,4 @@ The business owner values simplicity and accessibility. The contact form section
 
 ## Tech Stack
 
-The technologies used here include React JS as the main framework, Tailwind for styling, and GSAP for animations. "Click to chat" is employed for WhatsApp redirection, and Google Apps Script is integrated for form submission and Google Sheets interaction.
+The technologies used here include [React JS](https://react.dev/) as the main framework, [Tailwind](https://tailwindcss.com/) for styling, and [GSAP](https://gsap.com) for animations. ["Click to chat"](https://faq.whatsapp.com/5913398998672934) is employed for WhatsApp redirection, and [Google Apps](https://www.google.com/script/start/) Script is integrated for form submission and Google Sheets interaction.
