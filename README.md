@@ -1,8 +1,10 @@
-<p align="center">
-    <h1>Loka Chips</h1>
-    This website is an online sales platform for Loka Chips, a distinctive banana chips product from Kep. Selayar, managed by a local micro, small, and medium enterprise (MSME) in Gowa, Indonesia.
-</p>
-![Loka Chips Banner](https://github.com/zumaku/loka_chips/public/github_banner.png")
+![Loka Chips Banner](./public/github_banner.png")
+
+
+# Loka Chips
+
+This website is an online sales platform for Loka Chips, a distinctive banana chips product from Kep. Selayar, managed by a local micro, small, and medium enterprise (MSME) in Gowa, Indonesia.
+
 
 
 ## Features
