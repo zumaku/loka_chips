@@ -1,8 +1,17 @@
-# React + Vite
+<p align="center">
+    <h1>Loka Chips</h1>
+    This website is an online sales platform for Loka Chips, a distinctive banana chips product from Kep. Selayar, managed by a local micro, small, and medium enterprise (MSME) in Gowa, Indonesia.
+</p>
+![Loka Chips Banner](https://github.com/zumaku/loka_chips/public/github_banner.png")
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Not as complex as others. This website simply provides information about Loka Chips products and offers a way for customers to purchase the products through WhatsApp chat.
+
+The business owner values simplicity and accessibility. The contact form section doesn't rely on a database but is connected to Google Sheets instead. This way, the business owner can easily manage the inquiries there.
+
+
+## Tech Stack
+
+The technologies used here include React JS as the main framework, Tailwind for styling, and GSAP for animations. "Click to chat" is employed for WhatsApp redirection, and Google Apps Script is integrated for form submission and Google Sheets interaction.
