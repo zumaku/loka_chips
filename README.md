@@ -1,4 +1,4 @@
-![Loka Chips Banner](./public/github_banner.png")
+![Loka Chips Banner](./public/github_banner.png)
 
 
 # Loka Chips
