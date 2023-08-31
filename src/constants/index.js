@@ -211,12 +211,12 @@ export const infos = [
     {
         id: "email",
         content: "lokachips@gmail.com",
-        link: "#",
+        link: "",
     },
     {
         id: "website",
         content: "lokachips.netlify.com",
-        link: "#"
+        link: "https://lokachips.netlify.app/"
     },
     {
         id: "instagram",

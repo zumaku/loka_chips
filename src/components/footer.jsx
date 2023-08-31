@@ -13,6 +13,21 @@ import { getWaApi } from "../constants"
 const Footer = () => {
 
   const [currentYear] = useState(new Date().getFullYear());
+  const [isCopy, setIsCopy] = useState(false);
+
+  const phoneNumber = '082216774837'; // Ganti dengan nomor telepon yang ingin disalin
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(phoneNumber)
+      .then(() => {
+        console.log('Nomor telepon berhasil disalin ke clipboard');
+        setIsCopy(true)
+        setTimeout(() => setIsCopy(false), 2000)
+      })
+      .catch(err => {
+        console.error('Gagal menyalin nomor telepon: ', err);
+      });
+  };
 
   return (
     <div className={`${style.paddingX} max-w-[1300px] mx-auto flex flex-col`}>
@@ -42,16 +57,20 @@ const Footer = () => {
           }</ul>
           <div className="flex flex-col mb-12 ss:mb-0">
             <p className="mb-4 ">Hubungi Kimi di Whatsapp</p>
-            <a
-              href={getWaApi(true)}
-              target="blank"
+            {isCopy && (
+              <p className="text-xs mb-1 bg-primary w-fit py-1 px-2">Nomer tercopy!</p>
+            )}
+            <p
+              onClick={copyToClipboard}
               className="flex items-center mb-4"
             >
               <div className="w-8">
                 {setIcon(infos[infos.length - 1].id)}
               </div>
-              <p className="ml-2">{infos[infos.length - 1].content}</p>
-            </a>
+              <p className="ml-2">
+                {infos[infos.length - 1].content}
+              </p>
+            </p>
             <a
               href={getWaApi(true)}
               target="blank"
@@ -59,7 +78,6 @@ const Footer = () => {
             >Hubungi Sekarang</a>
           </div>
         </div>
-        {/* <div className="w-56"> */}
         <div className="w-fit ss:w-44 sm:w-fit flex flex-col justify-between">
           <a href="/">
             <img className="w-44  sm:w-52 " src={logo} alt="" />
