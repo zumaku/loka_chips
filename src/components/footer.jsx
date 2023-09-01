@@ -58,11 +58,11 @@ const Footer = () => {
           <div className="flex flex-col mb-12 ss:mb-0">
             <p className="mb-4 ">Hubungi Kimi di Whatsapp</p>
             {isCopy && (
-              <p className="text-xs mb-1 bg-primary w-fit py-1 px-2">Nomer tercopy!</p>
+              <p className="text-base mb-1 bg-primary w-fit py-1 px-2">Nomer tercopy!</p>
             )}
             <p
               onClick={copyToClipboard}
-              className="flex items-center mb-4"
+              className="flex items-center mb-4 hover:cursor-copy"
             >
               <div className="w-8">
                 {setIcon(infos[infos.length - 1].id)}
