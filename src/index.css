@@ -9,6 +9,34 @@
   src: url("assets/GillSansUltraBold.ttf") format("truetype");
 }
 
+@layer base{
+  :root {
+    --color-primary: 255, 199, 39;
+    --color-primary-half: 255, 199, 39, .5;
+    --color-secondary: 52, 29, 18;
+    --color-accent: 221, 154, 0;
+    --color-chocolate: 128, 95, 15;
+    --color-balado: 203, 39, 39;
+    --color-balado-half: 203, 39, 39, .5;
+    --color-txtcolor: 30, 30, 30;
+    --color-bkg: 255, 255, 255;
+  }
+  
+  @media (prefers-color-scheme:dark){
+    :root {
+      --color-primary: 255, 199, 39;
+      --color-primary-half: 255, 199, 39, .5;
+      --color-secondary: 52, 29, 18;
+      --color-accent: 221, 154, 0;
+      --color-chocolate: 128, 95, 15;
+      --color-balado: 203, 39, 39;
+      --color-balado-half: 203, 39, 39, .5;
+      --color-txtcolor: 30, 30, 30;
+      --color-bkg: 255, 255, 255;
+    }
+  }
+}
+
 ::selection {
   background-color: #F0C91A;
   color: #1E1E1E;
@@ -21,6 +49,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: white;
 }
 
 .text-stroke-1 {
