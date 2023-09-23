@@ -5,7 +5,7 @@
 
 This website is an online sales platform for Loka Chips, a distinctive banana chips product from Kep. Selayar, managed by a local micro, small, and medium enterprise (MSME) in Gowa, Indonesia.
 
-Visit Site: [lokachips.site](https://lokachips.site)
+Visit Site: [lokachips.site](https://lokachips.netlify.app)
 
 
 
